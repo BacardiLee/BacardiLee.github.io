@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="css/reset.css" />
 		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
-		<!--<script src="js/mainjs.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="js/json.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
@@ -93,7 +93,9 @@
 					<a href="javascript:;" class="saoyisao">
 						<i class="iconfont icon-saoyisao"></i>
 					</a>
-					<div class="QRcode"></div>
+					<div class="QRcode">
+						<img src="img/bigewm.png"/>
+					</div>
 				</li>
 				<li class="Db">
 					<a href="javascript:;" class="getTop">
@@ -183,7 +185,7 @@
 							<img src="img/201706271124380725648.gif" />
 						</div>
 						<div class="ma-search">
-							<input type="text" placeholder="网络K歌爆款套装享优惠" />
+							<input type="text" placeholder="网络K歌爆款套装享优惠" id="inp" />
 							<input type="button" value="搜索" />
 							<ul class="search-keyword">
 								<li>
@@ -527,42 +529,50 @@
 											<dl>
 												<dt><a href="javascript:;">声卡</a></dt>
 												<dd>
-													<a href="javascript:;">电容麦克风<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">动圈麦克风<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">USB麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">无线麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">电子管麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">录音麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">KTV/演出麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">乐器麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">采访麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">会议麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">测试麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">语音麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">手机麦克风<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">专业录音声卡<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">网络K歌声卡<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">游戏影音声卡<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">音乐HIFI声卡<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">MIDI声卡<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">PCI声卡<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">PCI-E声卡<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">外置声卡<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">火线声卡<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">录音套装<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">解码器<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">音频工作站<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">苹果声卡<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">扩展卡<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">声卡调试<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">声卡套装<icon class="smallIcon">/</icon></a>										
 												</dd>
 											</dl>
 											<dl>
-												<dt><a href="javascript:;">耳机</a></dt>
+												<dt><a href="javascript:;">调音台</a></dt>
 												<dd>
-													<a href="javascript:;">音乐耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">监听耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">手机耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">耳麦<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">游戏耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">运动耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">头戴式耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">耳塞<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">入耳式耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">耳挂式耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">便携式耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">无线耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">蓝牙耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">2.4G耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">带线控耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">HIFI耳机<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">USB调音台<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">数字调音台<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">录音调音台<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">带效果调音台<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">带功放调音台<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">DJ调音台<icon class="smallIcon">/</icon></a>
 												</dd>
-											</dl>											
+											</dl>
+											<dl>
+												<dt><a href="javascript:;">混音器</a></dt>
+												<dd>
+													<a href="javascript:;">舞台表演混音器<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">会议工程混音器<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">专业录音混音器<icon class="smallIcon">/</icon></a>
+												</dd>
+											</dl>
+											<dl>
+												<dt><a href="javascript:;">DI盒</a></dt>
+												<dd>
+													<a href="javascript:;">有源DI盒<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">无源DI盒<icon class="smallIcon">/</icon></a>
+												</dd>
+											</dl>
 										</div>																
 										<div class="rightList">
 											<dl>
@@ -614,40 +624,27 @@
 											<dl>
 												<dt><a href="javascript:;">话放</a></dt>
 												<dd>
-													<a href="javascript:;">电容麦克风<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">动圈麦克风<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">USB麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">无线麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">电子管麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">录音麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">KTV/演出麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">乐器麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">采访麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">会议麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">测试麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">语音麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">手机麦克风<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">模拟话放<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">数字话放<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">电子管话放<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">单通道话放<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">双通道话放<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">带EQ话放<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">带压缩话放<icon class="smallIcon">/</icon></a>																			
 												</dd>
 											</dl>
 											<dl>
-												<dt><a href="javascript:;">耳机</a></dt>
+												<dt><a href="javascript:;">耳放</a></dt>
 												<dd>
-													<a href="javascript:;">音乐耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">监听耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">手机耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">耳麦<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">游戏耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">运动耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">头戴式耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">耳塞<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">入耳式耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">耳挂式耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">便携式耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">无线耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">蓝牙耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">2.4G耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">带线控耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">HIFI耳机<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">电子管耳放<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">专业耳放<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">HIFI耳放<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">便携式耳放<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">数字耳放<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">模拟耳放<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">单通道耳放<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">双通道耳放<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">多通道耳放<icon class="smallIcon">/</icon></a>
 												</dd>
 											</dl>											
 										</div>																
@@ -699,44 +696,45 @@
 									<div class="smallList dgj">
 										<div class="menuList">
 											<dl>
-												<dt><a href="javascript:;">话放</a></dt>
+												<dt><a href="javascript:;">KTV点歌机</a></dt>
 												<dd>
-													<a href="javascript:;">电容麦克风<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">动圈麦克风<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">USB麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">无线麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">电子管麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">录音麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">KTV/演出麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">乐器麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">采访麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">会议麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">测试麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">语音麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">手机麦克风<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">一体化点歌机<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">单机版点歌机<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">19寸屏点歌机<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">桌面式点歌机<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">家庭KTV<icon class="smallIcon">/</icon></a>																			
 												</dd>
 											</dl>
 											<dl>
-												<dt><a href="javascript:;">耳机</a></dt>
+												<dt><a href="javascript:;">KTV触摸屏</a></dt>
 												<dd>
-													<a href="javascript:;">音乐耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">监听耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">手机耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">耳麦<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">游戏耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">运动耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">头戴式耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">耳塞<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">入耳式耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">耳挂式耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">便携式耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">无线耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">蓝牙耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">2.4G耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">带线控耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">HIFI耳机<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">落地触摸屏<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">桌面触摸屏<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">19寸触摸屏<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">22寸触摸屏<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">触摸屏支架<icon class="smallIcon">/</icon></a>
 												</dd>
-											</dl>											
+											</dl>
+											<dl>
+												<dt><a href="javascript:;">播放器</a></dt>
+												<dd>
+													<a href="javascript:;">音乐播放器<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">3D蓝光DVD播放器<icon class="smallIcon">/</icon></a>
+												</dd>
+											</dl>
+											<dl>
+												<dt><a href="javascript:;">录音机</a></dt>
+												<dd>
+													<a href="javascript:;">录音机<icon class="smallIcon">/</icon></a>
+												</dd>
+											</dl>
+											<dl>
+												<dt><a href="javascript:;">打碟机</a></dt>
+												<dd>
+													<a href="javascript:;">便携式打碟机<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">台式打碟机<icon class="smallIcon">/</icon></a>
+												</dd>
+											</dl>
 										</div>																
 										<div class="rightList">
 											<dl>
@@ -786,44 +784,80 @@
 									<div class="smallList pj">
 										<div class="menuList">
 											<dl>
-												<dt><a href="javascript:;">话放</a></dt>
+												<dt><a href="javascript:;">音响配件</a></dt>
 												<dd>
-													<a href="javascript:;">电容麦克风<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">动圈麦克风<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">USB麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">无线麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">电子管麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">录音麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">KTV/演出麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">乐器麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">采访麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">会议麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">测试麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">语音麦克风<icon class="smallIcon">/</icon></a>										
-													<a href="javascript:;">手机麦克风<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">音箱支架<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">音响线材<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">喇叭线<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">HDMI线<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">喇叭线香蕉头<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">卡侬头/座<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">转换头/座<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">时序器<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">工程机柜<icon class="smallIcon">/</icon></a>										
+													<a href="javascript:;">触摸屏支架<icon class="smallIcon">/</icon></a>																			
 												</dd>
 											</dl>
 											<dl>
-												<dt><a href="javascript:;">耳机</a></dt>
+												<dt><a href="javascript:;">麦克风配件</a></dt>
 												<dd>
-													<a href="javascript:;">音乐耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">监听耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">手机耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">耳麦<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">游戏耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">运动耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">头戴式耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">耳塞<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">入耳式耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">耳挂式耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">便携式耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">无线耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">蓝牙耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">2.4G耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">带线控耳机<icon class="smallIcon">/</icon></a>
-													<a href="javascript:;">HIFI耳机<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">麦克风支架<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">麦克风线材<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">麦克风夹子<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">防风棉<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">防噪网/防风屏<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">防滑圈<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">麦克风音头<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">防震架<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">麦克风网头<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">便携包/箱/盒<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">供电器<icon class="smallIcon">/</icon></a>
 												</dd>
-											</dl>											
+											</dl>
+											<dl>
+												<dt><a href="javascript:;">乐器配件</a></dt>
+												<dd>
+													<a href="javascript:;">吉他/贝司弦<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">吉它线材<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">MIDI线材<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">拨片<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">校音器/变调夹<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">节拍器<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">踏板<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">鼓棒/鼓凳/琴凳<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">吉他盒/包<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">吉他背带<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">效果器便携包<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">卷弦器<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">练习鼓垫<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">指力训练器<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">乐谱支架<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">电子琴支架<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">吉他支架<icon class="smallIcon">/</icon></a>
+												</dd>
+											</dl>
+											<dl>
+												<dt><a href="javascript:;">其它配件</a></dt>
+												<dd>
+													<a href="javascript:;">摄像头<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">耳机绕线器<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">蓝牙设备<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">电池<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">耳机便携盒<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">耳机线材<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">耳机套/耳塞棉<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">手机线材<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">USB数据线<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">数据线/纪念<icon class="smallIcon">/</icon></a>
+												</dd>
+											</dl>
+											<dl>
+												<dt><a href="javascript:;">软件/教材</a></dt>
+												<dd>
+													<a href="javascript:;">录音软件<icon class="smallIcon">/</icon></a>
+													<a href="javascript:;">吉他教材<icon class="smallIcon">/</icon></a>
+												</dd>
+											</dl>
 										</div>																
 										<div class="rightList">
 											<dl>
@@ -911,7 +945,7 @@
 				<!--轮播图-->				
 				<div class="banner">
 					<ul class="bannerList">
-						<li>
+						<li style="opacity: 1;">
 							<div class="siteWidth">
 								<img src="img/201707142058030776877.jpg"/>
 							</div>
@@ -944,7 +978,7 @@
 					</ul>
 					
 					<nav class="bannerNav">
-						<li></li>
+						<li class="banCor"></li>
 						<li></li>
 						<li></li>
 						<li></li>
@@ -1121,66 +1155,10 @@
 						<h2><i class="likeicon"><img src="img/like.png"/></i><strong>猜你喜欢</strong></h2>
 						<div class="more">
 							<i class="changeicon"><img src="img/huanyipi.png"/></i>
-							<a href="javascript:void(0);">换一批</a>
+							<a href="javascript:void(0);" class="changed">换一批</a>
 						</div>
 					</div>
-					<ul class="changelist">
-						<li>
-							<div class="likebox go-pic">
-								<div>
-									<a href="javascript:;">
-										<img src="img/201201061057460703717.jpg" class="move-pic"/>
-										<p>纽曼(Neumann)德国原装进口 U87 Ai 电容式录音麦克风 </p>
-									</a>
-								</div>
-								<span>&yen;<strong>19300.00</strong></span>
-							</div>							
-						</li>
-						<li>
-							<div class="likebox go-pic">
-								<div>
-									<a href="javascript:;">
-										<img src="img/201201061057460703717.jpg" class="move-pic"/>
-										<p>纽曼(Neumann)德国原装进口 U87 Ai 电容式录音麦克风 </p>
-									</a>
-								</div>
-								<span>&yen;<strong>19300.00</strong></span>
-							</div>							
-						</li>
-						<li>
-							<div class="likebox go-pic">
-								<div>
-									<a href="javascript:;">
-										<img src="img/201201061057460703717.jpg" class="move-pic"/>
-										<p>纽曼(Neumann)德国原装进口 U87 Ai 电容式录音麦克风 </p>
-									</a>
-								</div>
-								<span>&yen;<strong>19300.00</strong></span>
-							</div>							
-						</li>
-						<li>
-							<div class="likebox go-pic">
-								<div>
-									<a href="javascript:;">
-										<img src="img/201201061057460703717.jpg" class="move-pic"/>
-										<p>纽曼(Neumann)德国原装进口 U87 Ai 电容式录音麦克风 </p>
-									</a>
-								</div>
-								<span>&yen;<strong>19300.00</strong></span>
-							</div>							
-						</li>
-						<li>
-							<div class="likebox go-pic">
-								<div>
-									<a href="javascript:;">
-										<img src="img/201201061057460703717.jpg" class="move-pic"/>
-										<p>纽曼(Neumann)德国原装进口 U87 Ai 电容式录音麦克风 </p>
-									</a>
-								</div>
-								<span>&yen;<strong>19300.00</strong></span>
-							</div>							
-						</li>
-					</ul>
+					<ul class="changelist"></ul>
 				</div>
 				
 				
@@ -1256,598 +1234,22 @@
 				
 				
 				<!--1F-->
-				<div class="firstF">
-					<div class="fHeading">
-						<h2 class="h1"><i class="icon01">1F</i><strong>录音编曲</strong></h2>
-						<div class="more">
-							<a href="/profsoundcard.html" target="_blank" title="专业录音声卡">专业录音声卡</a><i class="pipe">/</i>
-							<a href="/recordingmics.html" target="_blank" title="录音麦克风">录音麦克风</a><i class="pipe">/</i>
-							<a href="/monitoringspeakers.html" target="_blank" title="监听音箱">监听音箱</a><i class="pipe">/</i>
-							<a href="/micrsignalprocess.html" target="_blank" title="专业话放">专业话放</a><i class="pipe">/</i>
-							<a href="/headsetamp_zy.html" target="_blank" title="专业耳放">专业耳放</a><i class="pipe">/</i>
-							<a href="/usbmics.html" target="_blank" title="USB麦克风">USB麦克风</a><i class="pipe">/</i>
-							<a href="/monitoringheadphone.html" target="_blank" title="监听耳机">监听耳机</a><i class="pipe">/</i>
-							<a href="/lymixer.html" target="_blank" title="录音调音台">录音调音台</a><i class="pipe">/</i>
-							<a href="/mixer_zy.html" target="_blank" title="  录音混音器"> 录音混音器</a><i class="pipe">/</i>
-							<a href="/midikbsynther.html" target="_blank" title="MIDI键盘">MIDI键盘</a><i class="pipe">/</i>
-						</div>
-					</div>
-					<div class="firstCon clearfix">
-						<div class="firstLeft">
-							<img src="img/201707211051550407744.jpg"/>
-						</div>
-						<div class="firstRight clearfix">
-							<div class="Rlist1 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">实时零延迟 声音温润</p>
-										<p class="f-18">专业品质录音套装</p>
-										<p class="item-price">&yen;<strong>35730.00</strong></p>
-									</div>
-									<img src="img/201707031957410550119.png" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist2 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">双振膜电容话筒 音色温暖细腻</p>
-										<p class="f-16">森海塞尔MK8录音麦克风</p>
-										<p class="item-price">&yen;<strong>5199.00</strong></p>
-									</div>
-									<img src="img/201706291545120765744.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist3 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">5寸 有源监听音箱</p>
-										<p class="f-16">卡尔卡RP5G3音箱</p>
-										<p class="item-price">&yen;<strong>2599.00</strong></p>
-									</div>
-									<img src="img/2017062915485700004.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist4 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">性能好 兼容性强</p>
-										<p class="f-18">单人录音套装</p>
-										<p class="item-price">&yen;<strong>9739.00</strong></p>
-									</div>
-									<img src="img/201707031958000969777.png" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist5 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">支持7天无理由退换货</p>
-										<p class="f-16">美奥多Keystation88键盘</p>
-										<p class="item-price">&yen;<strong>1558.00</strong></p>
-									</div>
-									<img src="img/201707041712210585214.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist6 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">单核UAD处理器 2进6出雷电接口</p>
-										<p class="f-16">Apollo Twin MKII SOLO</p>
-										<p class="item-price">&yen;<strong>5900.00</strong></p>
-									</div>
-									<img src="img/201706281821340274552.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="brand1">
-						<ul>
-							<li><a href="javascript:;" title="罗德(RODE)"><img src="img/1-1.gif"/></a></li>
-							<li><a href="javascript:;" title="舒尔(SHURE)"><img src="img/1-2.gif"/></a></li>
-							<li><a href="javascript:;" title="铁三角(Audio-technica)"><img src="img/1-3.gif"/></a></li>
-							<li><a href="javascript:;" title="爱科技(AKG)"><img src="img/1-4.gif"/></a></li>
-							<li><a href="javascript:;" title="纽曼(Neumann)"><img src="img/1-5.gif"/></a></li>
-							<li><a href="javascript:;" title="RME"><img src="img/1-6.gif"/></a></li>
-							<li><a href="javascript:;" title="雅马哈(steinberg)"><img src="img/1-7.jpg"/></a></li>
-							<li><a href="javascript:;" title="富克斯特(Focusrite)"><img src="img/1-8.gif"/></a></li>
-							<li><a href="javascript:;" title="KORG"><img src="img/1-9.gif"/></a></li>
-							<li><a href="javascript:;" title="亚当(ADAM)"><img src="img/1-10.gif"/></a></li>
-						</ul>
-					</div>
-				</div>
+				<div class="firstF side1" id="item1"></div>
 				
 				<!--2FFFF-->
-				<div class="firstF">
-					<div class="fHeading">
-						<h2 class="h1"><i class="icon01">2F</i><strong>网络主播</strong></h2>
-						<div class="more">
-							<a href="/profsoundcard.html" target="_blank" title="专业录音声卡">电容麦克风</a><i class="pipe">/</i>
-							<a href="/recordingmics.html" target="_blank" title="录音麦克风">手机麦克风</a><i class="pipe">/</i>
-							<a href="/monitoringspeakers.html" target="_blank" title="监听音箱">网络K歌声卡</a><i class="pipe">/</i>
-							<a href="/micrsignalprocess.html" target="_blank" title="专业话放">监听耳机</a><i class="pipe">/</i>
-							<a href="/headsetamp_zy.html" target="_blank" title="专业耳放">专业话放</a><i class="pipe">/</i>
-							<a href="/usbmics.html" target="_blank" title="USB麦克风">专业耳放</a><i class="pipe">/</i>
-							<a href="/monitoringheadphone.html" target="_blank" title="监听耳机">摄像头</a><i class="pipe">/</i>
-							<a href="/lymixer.html" target="_blank" title="录音调音台">麦克风支架</a><i class="pipe">/</i>
-							<a href="/mixer_zy.html" target="_blank" title="  录音混音器">麦克风线材</a><i class="pipe">/</i>
-							<a href="/midikbsynther.html" target="_blank" title="MIDI键盘">防燥网</a><i class="pipe">/</i>
-						</div>
-					</div>
-					<div class="firstCon clearfix">
-						<div class="firstLeft">
-							<img src="img/201707192022000923459.jpg"/>
-						</div>
-						<div class="firstRight clearfix">
-							<div class="Rlist1 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">三个月免费调试</p>
-										<p class="f-18">高品质专业主播套装</p>
-										<p class="item-price">&yen;<strong>3069.00</strong></p>
-									</div>
-									<img src="img/201707211053340846872.png" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist2 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">操作更简 单音效出彩</p>
-										<p class="f-16">莱维特LCT240PRO麦克风</p>
-										<p class="item-price">&yen;<strong>1899.00</strong></p>
-									</div>
-									<img src="img/201704241507530164893.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist3 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">音效丰富 性价比高</p>
-										<p class="f-16">K歌精致之选</p>
-										<p class="item-price">&yen;<strong>1639.00</strong></p>
-									</div>
-									<img src="img/20170629155816088799.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist4 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">具备性价比的入门级</p>
-										<p class="f-18">铁三角ATH-M20x耳机 </p>
-										<p class="item-price">&yen;<strong>338.00</strong></p>
-									</div>
-									<img src="img/20170719091450057635.png" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist5 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">零延迟监听 稳定性好</p>
-										<p class="f-16">雅马哈UR242 K歌声卡</p>
-										<p class="item-price">&yen;<strong>1618.00</strong></p>
-									</div>
-									<img src="img/201706291534530384665.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist6 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">高清 美颜 显瘦 兼容性强</p>
-										<p class="f-16">不得不爱7PLUS摄像头</p>
-										<p class="item-price">&yen;<strong>1399.00</strong></p>
-									</div>
-									<img src="img/201707180925450712950.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="brand1">
-						<ul>
-							<li><a href="javascript:;" title="罗德(RODE)"><img src="img/201204021439120347581.gif"/></a></li>
-							<li><a href="javascript:;" title="舒尔(SHURE)"><img src="img/201204021441440420986.gif"/></a></li>
-							<li><a href="javascript:;" title="铁三角(Audio-technica)"><img src="img/201211291637040818474.gif"/></a></li>
-							<li><a href="javascript:;" title="爱科技(AKG)"><img src="img/1-1.gif"/></a></li>
-							<li><a href="javascript:;" title="纽曼(Neumann)"><img src="img/201706081641250189575.gif"/></a></li>
-							<li><a href="javascript:;" title="RME"><img src="img/201204021521500957606.gif"/></a></li>
-							<li><a href="javascript:;" title="雅马哈(steinberg)"><img src="img/201703141800410023840.gif"/></a></li>
-							<li><a href="javascript:;" title="富克斯特(Focusrite)"><img src="img/201706011141360088301.gif"/></a></li>
-							<li><a href="javascript:;" title="KORG"><img src="img/201204021448380267491.gif"/></a></li>
-							<li><a href="javascript:;" title="亚当(ADAM)"><img src="img/201610281205430007738.gif"/></a></li>
-						</ul>
-					</div>
-				</div>
+				<div class="firstF side1" id="item2"></div>
 				
 				<!--3FFFF-->
-				<div class="firstF">
-					<div class="fHeading">
-						<h2 class="h1"><i class="icon01">3F</i><strong>家庭KTV</strong></h2>
-						<div class="more">
-							<a href="/profsoundcard.html" target="_blank" title="卡包功放">卡包功放</a><i class="pipe">/</i>
-							<a href="/recordingmics.html" target="_blank" title="卡包音箱">卡包音箱</a><i class="pipe">/</i>
-							<a href="/monitoringspeakers.html" target="_blank" title="KTV点歌机">KTV点歌机</a><i class="pipe">/</i>
-							<a href="/micrsignalprocess.html" target="_blank" title="专业话放">KTV触摸屏</a><i class="pipe">/</i>
-							<a href="/headsetamp_zy.html" target="_blank" title="专业耳放">KTV麦克风</a><i class="pipe">/</i>
-							<a href="/usbmics.html" target="_blank" title="USB麦克风">无线麦克风</a><i class="pipe">/</i>
-							<a href="/monitoringheadphone.html" target="_blank" title="监听耳机">动圈麦克风</a><i class="pipe">/</i>
-							<a href="/lymixer.html" target="_blank" title="录音调音台">音箱支架</a><i class="pipe">/</i>
-							<a href="/mixer_zy.html" target="_blank" title="  录音混音器">音响线材</a><i class="pipe">/</i>
-							<a href="/midikbsynther.html" target="_blank" title="MIDI键盘">工程机柜</a><i class="pipe">/</i>
-						</div>
-					</div>
-					<div class="firstCon clearfix">
-						<div class="firstLeft">
-							<img src="img/201705111157380671106.jpg"/>
-						</div>
-						<div class="firstRight clearfix">
-							<div class="Rlist1 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">云端下载 手机点歌</p>
-										<p class="f-18">BMB品牌KTV套装</p>
-										<p class="item-price">&yen;<strong>17826.00</strong></p>
-									</div>
-									<img src="img/201706282037280049956.png" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist2 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">2T硬盘 云端下载</p>
-										<p class="f-16">CCET CKL-108点歌机</p>
-										<p class="item-price">&yen;<strong>1499.00</strong></p>
-									</div>
-									<img src="img/201706291530570780509.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist3 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">19寸落地式 适用家庭KTV</p>
-										<p class="f-16">CCET高清触摸屏</p>
-										<p class="item-price">&yen;<strong>11999.00</strong></p>
-									</div>
-									<img src="img/201703281122270627139.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist4 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">混响双模效果 操作人性化</p>
-										<p class="f-18">JBL品牌KTV套装</p>
-										<p class="item-price">&yen;<strong>17909.00</strong></p>
-									</div>
-									<img src="img/201706282037400986891.png" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist5 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">高输出功率 噪音低 数字功放</p>
-										<p class="f-16">雅马哈PX5 500W功放</p>
-										<p class="item-price">&yen;<strong>6099.00</strong></p>
-									</div>
-									<img src="img/201707081417460213544.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist6 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">三分频系统 均匀覆盖空间</p>
-										<p class="f-16">雅马哈KMS-3100音箱</p>
-										<p class="item-price">&yen;<strong>6448.00</strong></p>
-									</div>
-									<img src="img/201707121735040518254.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="brand1">
-						<ul>
-							<li><a href="javascript:;" title="罗德(RODE)"><img src="img/201204021439120347581.gif"/></a></li>
-							<li><a href="javascript:;" title="舒尔(SHURE)"><img src="img/201204021441440420986.gif"/></a></li>
-							<li><a href="javascript:;" title="铁三角(Audio-technica)"><img src="img/201211291637040818474.gif"/></a></li>
-							<li><a href="javascript:;" title="爱科技(AKG)"><img src="img/1-1.gif"/></a></li>
-							<li><a href="javascript:;" title="纽曼(Neumann)"><img src="img/201706081641250189575.gif"/></a></li>
-							<li><a href="javascript:;" title="RME"><img src="img/201204021521500957606.gif"/></a></li>
-							<li><a href="javascript:;" title="雅马哈(steinberg)"><img src="img/201703141800410023840.gif"/></a></li>
-							<li><a href="javascript:;" title="富克斯特(Focusrite)"><img src="img/201706011141360088301.gif"/></a></li>
-							<li><a href="javascript:;" title="KORG"><img src="img/201204021448380267491.gif"/></a></li>
-							<li><a href="javascript:;" title="亚当(ADAM)"><img src="img/201610281205430007738.gif"/></a></li>
-						</ul>
-					</div>
-				</div>
-				<!--4FFFF-->
-				<div class="firstF">
-					<div class="fHeading">
-						<h2 class="h1"><i class="icon01">4F</i><strong>吉他乐器</strong></h2>
-						<div class="more">
-							<a href="/profsoundcard.html" target="_blank" title="专业录音声卡">电吉他</a><i class="pipe">/</i>
-							<a href="/recordingmics.html" target="_blank" title="录音麦克风">民谣吉他</a><i class="pipe">/</i>
-							<a href="/monitoringspeakers.html" target="_blank" title="监听音箱">电箱吉他</a><i class="pipe">/</i>
-							<a href="/micrsignalprocess.html" target="_blank" title="专业话放">电贝司</a><i class="pipe">/</i>
-							<a href="/headsetamp_zy.html" target="_blank" title="专业耳放">吉他效果器</a><i class="pipe">/</i>
-							<a href="/usbmics.html" target="_blank" title="USB麦克风">吉他</a><i class="pipe">/</i>
-							<a href="/monitoringheadphone.html" target="_blank" title="监听耳机">贝司音箱</a><i class="pipe">/</i>
-							<a href="/lymixer.html" target="_blank" title="录音调音台">电钢琴</a><i class="pipe">/</i>
-							<a href="/mixer_zy.html" target="_blank" title="  录音混音器">电子琴</a><i class="pipe">/</i>
-							<a href="/midikbsynther.html" target="_blank" title="MIDI键盘">电子鼓</a><i class="pipe">/</i>
-						</div>
-					</div>
-					<div class="firstCon clearfix">
-						<div class="firstLeft">
-							<img src="img/201705241131060782556.jpg"/>
-						</div>
-						<div class="firstRight clearfix">
-							<div class="Rlist1 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">稳定 易使用 耐用 价格经济</p>
-										<p class="f-18">TAMA IP52KH6</p>
-										<p class="item-price">&yen;<strong>5979.00</strong></p>
-									</div>
-									<img src="img/201706282038030947906.png" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist2 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">造型优雅 手感佳 性价比高</p>
-										<p class="f-16">芬达PLAYER STRAT</p>
-										<p class="item-price">&yen;<strong>6499.00</strong></p>
-									</div>
-									<img src="img/201505141444220018690.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist3 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">高等级山羊皮 手工打造</p>
-										<p class="f-16">泰坤TAJ-12金贝鼓手鼓</p>
-										<p class="item-price">&yen;<strong>1128.00</strong></p>
-									</div>
-									<img src="img/201503231642250237879.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist4 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">49键 MIDI键盘 LED灯显示</p>
-										<p class="f-18">诺维逊Nocturn 键盘 </p>
-										<p class="item-price">&yen;<strong>2299.00</strong></p>
-									</div>
-									<img src="img/201706282038220557104.png" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist5 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">初学者的专用 发声性极强</p>
-										<p class="f-16">Tom TUC-200尤克里里</p>
-										<p class="item-price">&yen;<strong>439.00</strong></p>
-									</div>
-									<img src="img/201508151436570549577.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist6 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">全功能合一型</p>
-										<p class="f-16">罗兰TD-11K电子鼓</p>
-										<p class="item-price">&yen;<strong>7099.00</strong></p>
-									</div>
-									<img src="img/201401231727090072438.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="brand1">
-						<ul>
-							<li><a href="javascript:;" title="罗德(RODE)"><img src="img/201204021439120347581.gif"/></a></li>
-							<li><a href="javascript:;" title="舒尔(SHURE)"><img src="img/201204021441440420986.gif"/></a></li>
-							<li><a href="javascript:;" title="铁三角(Audio-technica)"><img src="img/201211291637040818474.gif"/></a></li>
-							<li><a href="javascript:;" title="爱科技(AKG)"><img src="img/1-1.gif"/></a></li>
-							<li><a href="javascript:;" title="纽曼(Neumann)"><img src="img/201706081641250189575.gif"/></a></li>
-							<li><a href="javascript:;" title="RME"><img src="img/201204021521500957606.gif"/></a></li>
-							<li><a href="javascript:;" title="雅马哈(steinberg)"><img src="img/201703141800410023840.gif"/></a></li>
-							<li><a href="javascript:;" title="富克斯特(Focusrite)"><img src="img/201706011141360088301.gif"/></a></li>
-							<li><a href="javascript:;" title="KORG"><img src="img/201204021448380267491.gif"/></a></li>
-							<li><a href="javascript:;" title="亚当(ADAM)"><img src="img/201610281205430007738.gif"/></a></li>
-						</ul>
-					</div>
-				</div>
+				<div class="firstF side1" id="item3"></div>
+				
+				<!--4FFFF--> 
+				<div class="firstF side1" id="item4"></div>
 				<!--5FFFF-->
-				<div class="firstF">
-					<div class="fHeading">
-						<h2 class="h1"><i class="icon01">5F</i><strong>影视录音</strong></h2>
-						<div class="more">
-							<a href="/profsoundcard.html" target="_blank" title="专业录音声卡">录音机</a><i class="pipe">/</i>
-							<a href="/recordingmics.html" target="_blank" title="录音麦克风">采访麦克风</a><i class="pipe">/</i>
-							<a href="/monitoringspeakers.html" target="_blank" title="监听音箱">无线麦克风</a><i class="pipe">/</i>
-							<a href="/micrsignalprocess.html" target="_blank" title="专业话放">监听耳机</a><i class="pipe">/</i>
-							<a href="/headsetamp_zy.html" target="_blank" title="专业耳放">防风棉</a><i class="pipe">/</i>
-						</div>
-					</div>
-					<div class="firstCon clearfix">
-						<div class="firstLeft">
-							<img src="img/201705111426290933721.jpg"/>
-						</div>
-						<div class="firstRight clearfix">
-							<div class="Rlist1 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">多功能品质推荐</p>
-										<p class="f-18">摄影机录摄套装</p>
-										<p class="item-price">&yen;<strong>7549.00</strong></p>
-									</div>
-									<img src="img/201706282039170040655.png" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist2 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">短枪话筒 自带麦克风 </p>
-										<p class="f-16">DR-10SG录音机</p>
-										<p class="item-price">&yen;<strong>1668.00</strong></p>
-									</div>
-									<img src="img/201706291142050475944.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist3 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">还原性高 HIFI发烧级</p>
-										<p class="f-16">爱科技K702监听耳机</p>
-										<p class="item-price">&yen;<strong>1789.00</strong></p>
-									</div>
-									<img src="img/201111221016500682566.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist4 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">高保真采访录音推荐</p>
-										<p class="f-18">数码录音机套装</p>
-										<p class="item-price">&yen;<strong>2050.00</strong></p>
-									</div>
-									<img src="img/201706282039240767271.png" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist5 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">自带防震架 双格式高清录制</p>
-										<p class="f-16">TASCAM100MK3录音机</p>
-										<p class="item-price">&yen;<strong>2979.00</strong></p>
-									</div>
-									<img src="img/201706291457190659571.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist6 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">清晰的人声拾音，灵敏度高，失真小，动态范围大</p>
-										<p class="f-16">得胜 SGC 578 电容式采访麦克风</p>
-										<p class="item-price">&yen;<strong>286.00</strong></p>
-									</div>
-									<img src="img/201103111457480025467.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="brand1">
-						<ul>
-							<li><a href="javascript:;" title="罗德(RODE)"><img src="img/201204021439120347581.gif"/></a></li>
-							<li><a href="javascript:;" title="舒尔(SHURE)"><img src="img/201204021441440420986.gif"/></a></li>
-							<li><a href="javascript:;" title="铁三角(Audio-technica)"><img src="img/201211291637040818474.gif"/></a></li>
-							<li><a href="javascript:;" title="爱科技(AKG)"><img src="img/1-1.gif"/></a></li>
-							<li><a href="javascript:;" title="纽曼(Neumann)"><img src="img/201706081641250189575.gif"/></a></li>
-							<li><a href="javascript:;" title="RME"><img src="img/201204021521500957606.gif"/></a></li>
-							<li><a href="javascript:;" title="雅马哈(steinberg)"><img src="img/201703141800410023840.gif"/></a></li>
-							<li><a href="javascript:;" title="富克斯特(Focusrite)"><img src="img/201706011141360088301.gif"/></a></li>
-							<li><a href="javascript:;" title="KORG"><img src="img/201204021448380267491.gif"/></a></li>
-							<li><a href="javascript:;" title="亚当(ADAM)"><img src="img/201610281205430007738.gif"/></a></li>
-						</ul>
-					</div>
-				</div>
+				<div class="firstF side1" id="item5"></div>
 				<!--6FFFF-->
-				<div class="firstF">
-					<div class="fHeading">
-						<h2 class="h1"><i class="icon01">6F</i><strong>其他应用</strong></h2>
-						<div class="more">
-							<a href="/profsoundcard.html" target="_blank" title="专业录音声卡">舞台音箱</a><i class="pipe">/</i>
-							<a href="/recordingmics.html" target="_blank" title="录音麦克风">扩音调音台</a><i class="pipe">/</i>
-							<a href="/monitoringspeakers.html" target="_blank" title="监听音箱">混音器</a><i class="pipe">/</i>
-							<a href="/micrsignalprocess.html" target="_blank" title="专业话放">人声效果器</a><i class="pipe">/</i>
-							<a href="/headsetamp_zy.html" target="_blank" title="专业耳放">演出麦克风</a><i class="pipe">/</i>
-							<a href="/usbmics.html" target="_blank" title="USB麦克风">打碟机</a><i class="pipe">/</i>
-							<a href="/monitoringheadphone.html" target="_blank" title="监听耳机">会议麦克风</a><i class="pipe">/</i>
-							<a href="/lymixer.html" target="_blank" title="录音调音台">会议音箱</a><i class="pipe">/</i>
-							<a href="/mixer_zy.html" target="_blank" title="  录音混音器">会议功放</a><i class="pipe">/</i>
-							<a href="/midikbsynther.html" target="_blank" title="MIDI键盘">会议摄像头</a><i class="pipe">/</i>
-						</div>
-					</div>
-					<div class="firstCon clearfix">
-						<div class="firstLeft">
-							<img src="img/201705111451520165521.jpg"/>
-						</div>
-						<div class="firstRight clearfix">
-							<div class="Rlist1 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">声场宽阔 抗干扰 防啸叫</p>
-										<p class="f-18">得胜 多媒体会议套装</p>
-										<p class="item-price">&yen;<strong>9599.00</strong></p>
-									</div>
-									<img src="img/201706282039560722502.png" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist2 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">拾音灵敏度高 性能稳定</p>
-										<p class="f-16">得胜MS-610会议麦克风</p>
-										<p class="item-price">&yen;<strong>1899.00</strong></p>
-									</div>
-									<img src="img/201210260952210627608.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist3 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">跨界音响一机三用</p>
-										<p class="f-16">飞利浦CSS6530B/93</p>
-										<p class="item-price">&yen;<strong>7888.00</strong></p>
-									</div>
-									<img src="img/201706281511340700699.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist4 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">全方位环绕音质组合</p>
-										<p class="f-18">JBL 家庭影院套装</p>
-										<p class="item-price">&yen;<strong>14793.00</strong></p>
-									</div>
-									<img src="img/201706282039470270705.png" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist5 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">美观舒适 20小时续航</p>
-										<p class="f-16">Beats Studio耳机</p>
-										<p class="item-price">&yen;<strong>1988.00</strong></p>
-									</div>
-									<img src="img/20170629150153076787.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-							<div class="Rlist6 go-pic">
-								<a href="javascript:;">
-									<div class="sellinfo">
-										<p class="c-999">分频多功能 适用范围广</p>
-										<p class="f-16">山逊Auro X12D音箱</p>
-										<p class="item-price">&yen;<strong>2459.00</strong></p>
-									</div>
-									<img src="img/201706291159130992123.jpg" class="item-pic move-pic"/>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="brand1">
-						<ul>
-							<li><a href="javascript:;" title="罗德(RODE)"><img src="img/201204021439120347581.gif"/></a></li>
-							<li><a href="javascript:;" title="舒尔(SHURE)"><img src="img/201204021441440420986.gif"/></a></li>
-							<li><a href="javascript:;" title="铁三角(Audio-technica)"><img src="img/201211291637040818474.gif"/></a></li>
-							<li><a href="javascript:;" title="爱科技(AKG)"><img src="img/1-1.gif"/></a></li>
-							<li><a href="javascript:;" title="纽曼(Neumann)"><img src="img/201706081641250189575.gif"/></a></li>
-							<li><a href="javascript:;" title="RME"><img src="img/201204021521500957606.gif"/></a></li>
-							<li><a href="javascript:;" title="雅马哈(steinberg)"><img src="img/201703141800410023840.gif"/></a></li>
-							<li><a href="javascript:;" title="富克斯特(Focusrite)"><img src="img/201706011141360088301.gif"/></a></li>
-							<li><a href="javascript:;" title="KORG"><img src="img/201204021448380267491.gif"/></a></li>
-							<li><a href="javascript:;" title="亚当(ADAM)"><img src="img/201610281205430007738.gif"/></a></li>
-						</ul>
-					</div>
-				</div>
+				<div class="firstF side1" id="item6"></div>
 				<!--晒单晒单-->
-				<div class="shaidan">
+				<div class="shaidan side1"  id="item7">
 					<div class="shaiheading">
 						<h2 class="h1"><i class="shaiicon"><img src="img/shaidan.png"/></i><strong>最新晒单</strong></h2>
 					</div>
@@ -2159,6 +1561,23 @@
 			</footer>
 			
 			<!--页脚结束-->
+			
+			<!--侧边导航栏-->
+			<ul class="sideNav" id="sNav">
+				<li>导航</li>
+				<li><a href="#item1" class="sA">录音编曲</a></li>
+				<li><a href="#item2" class="sA">网络主播</a></li>
+				<li><a href="#item3" class="sA">家庭KTV</a></li>
+				<li><a href="#item4" class="sA">吉他乐器</a></li>
+				<li><a href="#item5" class="sA">影视录音</a></li>
+				<li><a href="#item6" class="sA">其他应用</a></li>
+				<li><a href="#item7" class="sA">最新晒单</a></li>
+				<a href="javascript:;">
+					<img src="img/ttttop.png"/>
+					<br />
+					顶部
+				</a>
+			</ul>
 		</div>
 
 	</body>

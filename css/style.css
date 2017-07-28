@@ -8,20 +8,33 @@
 .banner{
 	width:100%;
 	height:450px;
-	background: red;
 }
 .bannerList{
 	width:100%;
 	height:100%;
-	background: palevioletred;
 	overflow: hidden;
+	position: relative;
+}
+.bannerList>li{
+	transition: 1s;
+	-moz-transition: 1s;
+	-webkit-transition: 1s;
+	-ms-transition: 1s;
+	opacity: 0;
+	float:left;
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
 }
 .siteWidth{
 	width:770px;
 	height:450px;
 	margin-left:280px;
-	opacity: 1;
 }
+/*.siteWidth:nth-of-type(1){
+	opacity: 1;
+}*/
 .siteWidth img{
 	display: block;
 	width:100%;
@@ -36,11 +49,14 @@
 .bannerNav li{
 	width:40px;
 	height:6px;
-	background: rgba(255,255,255,.6);
+	background: #fff;
+	opacity: .6;
 	float:left;
 	margin-right: 5px;
 }
-
+.bannerNav li.banCor{
+	opacity: 1;
+}
 .notice{
 	width:222px;
 	height:450px;
@@ -658,4 +674,52 @@
 .go-pic:hover .move-pic{
 	-webkit-transform: translateX(-5px);
 	transform: translateX(-5px);
+}
+
+
+
+/*侧边导航栏*/
+.sideNav{
+	width:40px;
+	position: fixed;
+	left:50%;
+	margin-left:-660px;
+	bottom:50px;
+	transition: 1s;
+	opacity: 0;
+}
+.sideNav li{
+	width:40px;
+	height:40px;
+	margin-bottom: 1px;
+	background: #666;
+}
+.sideNav a{
+	display: block;
+	width:40px;
+	height:40px;
+	
+	color:#fff;
+	text-align: center;
+	line-height: 15px;	
+	font-size: 12px;
+	padding:5px 5px 0 5px;
+}
+.sideNav li:nth-of-type(1){
+	background: #ff6600;
+	text-align: center;
+	line-height: 40px;
+	font-size:14px;
+	color:#fff;
+}
+.sideNav>a{
+	background: #8a8a8a;
+}
+.sideTop a img{
+	padding-left:5px;
+	padding-top:2px;
+}
+#sNav>li a.sideActive{
+	background: #ff6600;
+	z-index: 999;
 }

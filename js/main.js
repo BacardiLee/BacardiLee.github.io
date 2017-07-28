@@ -46,6 +46,13 @@ window.onload = function(){
 			left : -122
 		},1000)
 	})
+	$('.sys').mouseover(function(){
+		$('.QRcode').show();
+	}).mouseout(function(){
+		$('.QRcode').hide();
+	})
+	
+	
 	$('#myYp').mouseover(function(){
 		$('.topShow').show()
 	}).mouseout(function(){
@@ -90,16 +97,217 @@ window.onload = function(){
 		}
 	}
 	
-	//鼠标悬浮图片，图片移动
-//	var goPic = $('.go-pic');
-//	var movePic = $('.move-pic');
-//	
-//	goPic.on('mouseover',function(){
-//		$(this).find(movePic).animate({
-//			'transition':'1s',
-//			'webkitTransition':'1s',
-//			'transform':'translateX(-5px)',
-//			'webkitTransform':'translateX(-5px)'
-//		})
-//	})
+	/*轮播图开始*/
+	
+	var banner = $('.banner');
+	var bannerList = $('.bannerList');
+	var siteWidth = $('.siteWidth');
+	var banLis = $('.bannerList>li');
+	var bannerNav = $('.bannerNav');
+	var navLis = $('.bannerNav>li');
+	var timer = null;
+	var num = 0;
+	var arr = ['#b316e6','#9d43fc','#f83259','#ffa258','#01b6c9','#000000'];
+	banLis[0].style.background = arr[0];
+	timer = setInterval(function(){
+		num++;
+		if(num == banLis.length){
+			num = 0;
+		}		
+		for(var i=0;i<siteWidth.length;i++){
+			banLis[i].style.opacity= '0';
+			navLis[i].className = '';
+		}
+		banLis[num].style.opacity= '1';
+		banLis[num].style.background = arr[num];
+		navLis[num].className = 'banCor';
+	},2000)
+	/*轮播图结束*/
+	
+	
+	/*猜你喜欢开始*/
+	var youLike = document.getElementsByClassName('youlike')[0];
+	var uLike = oData.ulike;
+	var oUl = document.getElementsByClassName('changelist')[0];
+	var changed = document.getElementsByClassName('changed')[0];
+	var oNum = 0;
+	
+	createLi(0);
+	function createLi(index){
+		oUl.innerHTML = '';
+		for(var i=index;i<index+5;i++){
+			oUl.innerHTML += '<li>'+
+				'<div class="likebox go-pic">'+
+					'<div>'+
+						'<a href="'+uLike[i].href+'" target="_blank">'+
+							'<img src='+uLike[i].prosrc+' class="move-pic"/>'+
+							'<p>'+uLike[i].oP+'</p>'+
+						'</a>'+
+					'</div>'+
+					'<span>&yen;<strong>'+uLike[i].price+'</strong></span>'+
+				'</div>	'+						
+			'</li>'
+		}
+	}
+	
+	changed.onclick = function(){
+		oNum++;
+		if(oNum%2==1){
+			createLi(5);
+		}else if(oNum%2==0){
+			createLi(0);
+		}
+	}
+	/*猜你喜欢结束*/
+	/*各楼层信息开始*/
+	var arr1 = ['first','second','three','four','five','six'];
+	var arr2 = ['one','two','three','four','five','six'];
+//	var firstF = document.getElementsByClassName('firstF');
+	var firstF = $('.firstF');
+	for(var i=0;i<firstF.length;i++){
+		var info = floor[arr1[i]];
+		firstF.eq(i).html('');
+		var html = `
+		<div class="fHeading">
+			<h2 class="h1"><i class="icon01">${info.fName}</i><strong>${info.title}</strong></h2>
+			<div class="more">`;
+			for(var j=0;j<info.nav.length;j++){
+				html+=`<a href="${info.href[j]}" target="_blank" title="${info.nav[j]}">${info.nav[j]}</a><i class="pipe">/</i>`;
+			}
+				
+			html+=`</div>
+		</div>
+		<div class="firstCon clearfix">
+			<div class="firstLeft">
+				<a href="${info.bigH}" target="_blank"><img src="${info.bigPic}"/></a>				
+			</div>
+			<div class="firstRight clearfix">
+				<div class="Rlist1 go-pic">
+					<a href="javascript:;">
+						<div class="sellinfo">
+							<p class="c-999">${info.content[0].one[0]}</p>
+							<p class="f-18" title="${info.content[0].one[1]}">${info.content[0].one[1]}</p>
+							<p class="item-price">&yen;<strong>${info.content[0].one[2]}</strong></p>
+						</div>
+						<img src="${info.content[0].one[3]}" class="item-pic move-pic"/>
+					</a>
+				</div>
+				<div class="Rlist2 go-pic">
+					<a href="javascript:;">
+						<div class="sellinfo">
+							<p class="c-999">${info.content[0].two[0]}</p>
+							<p class="f-16" title="${info.content[0].two[1]}">${info.content[0].two[1]}</p>
+							<p class="item-price">&yen;<strong>${info.content[0].two[2]}</strong></p>
+						</div>
+						<img src="${info.content[0].two[3]}" class="item-pic move-pic"/>
+					</a>
+				</div>
+				<div class="Rlist3 go-pic">
+					<a href="javascript:;">
+						<div class="sellinfo">
+							<p class="c-999">${info.content[0].three[0]}</p>
+							<p class="f-16" title="${info.content[0].three[1]}">${info.content[0].three[1]}</p>
+							<p class="item-price">&yen;<strong>${info.content[0].three[2]}</strong></p>
+						</div>
+						<img src="${info.content[0].three[3]}" class="item-pic move-pic"/>
+					</a>
+				</div>
+				<div class="Rlist4 go-pic">
+					<a href="javascript:;">
+						<div class="sellinfo">
+							<p class="c-999">${info.content[0].four[0]}</p>
+							<p class="f-18" title="${info.content[0].four[1]}">${info.content[0].four[1]}</p>
+							<p class="item-price">&yen;<strong>${info.content[0].four[2]}</strong></p>
+						</div>
+						<img src="${info.content[0].four[3]}" class="item-pic move-pic"/>
+					</a>
+				</div>
+				<div class="Rlist5 go-pic">
+					<a href="javascript:;">
+						<div class="sellinfo">
+							<p class="c-999">${info.content[0].five[0]}</p>
+							<p class="f-16" title="${info.content[0].five[1]}">${info.content[0].five[1]}</p>
+							<p class="item-price">&yen;<strong>${info.content[0].five[2]}</strong></p>
+						</div>
+						<img src="${info.content[0].five[3]}" class="item-pic move-pic"/>
+					</a>
+				</div>
+				<div class="Rlist6 go-pic">
+					<a href="javascript:;">
+						<div class="sellinfo">
+							<p class="c-999">${info.content[0].six[0]}</p>
+							<p class="f-16" title="${info.content[0].six[1]}">${info.content[0].six[1]}</p>
+							<p class="item-price">&yen;<strong>${info.content[0].six[2]}</strong></p>
+						</div>
+						<img src="${info.content[0].six[3]}" class="item-pic move-pic"/>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="brand1">
+			<ul>`;
+			for(var k=0;k<info.brand[0].bSrc.length;k++){
+		html+=`<li><a href="javascript:;" title="${info.brand[0].title[k]}"><img src="${info.brand[0].bSrc[k]}"/></a></li>`;		
+			}
+		html+=`</ul></div>`;	
+		
+		firstF.eq(i).append(html);
+	}
+
+	
+	/*各楼层信息结束*/
+	
+	
+	/*侧边导航栏开始*/
+	
+	$("#sNav").find('li').click(function(){
+		$(this).addClass("sideActive").siblings().removeClass("sideActive");
+		$("body").animate({
+			scrollTop : $('.firstF').height()*$(this).index()+1170+$(this).index()*30
+		},500)
+	})	
+
+	$(window).scroll(function(){
+		var body = $('body');
+		var top = $(document).scrollTop();
+		var sideNav = $('.sideNav');	
+		var side = $('.side1');
+		var sA = $('#sNav').find('.sA');
+		if(body.scrollTop()>=500){
+			sideNav.css({
+				opacity : 1,
+			})
+		}else{
+			sideNav.css({
+				opacity : 0,
+			})
+		}
+		
+		side.each(function (i) {
+            var m = $(this);
+            //注意：m.offset().top代表每一个firstF的顶部位置
+            if (top > m.offset().top - 300) {
+//              itemId = "#" + m.attr("id");
+				sA.eq(i).addClass('sideActive').parent().siblings().find('.sA').removeClass('sideActive');
+            } else {
+                return false;
+            }
+        });
+        
+       if(top<=1400){
+       	 sA.removeClass('sideActive');
+       }
+        
+	})
+
+	
+	/*侧边导航栏结束*/
+	
+	var inp = $('#inp');
+	inp.on('focus',function(){
+		$(this).attr('placeholder','')
+	})
+	inp.on('blur',function(){
+		$(this).attr('placeholder','网络K歌爆款套装享优惠')
+	})
 }
