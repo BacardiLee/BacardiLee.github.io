@@ -1,13 +1,14 @@
 @charset "utf-8";
-.content{
+.main_content{
 	margin:0;
 	padding:0;
 	width:100%;
-	/*position: relative;*/
+	position: relative;
 }
 .banner{
 	width:100%;
 	height:450px;
+	/*min-width: 990px;*/
 }
 .bannerList{
 	width:100%;
@@ -16,6 +17,8 @@
 	position: relative;
 }
 .bannerList>li{
+	width: 100%;
+	height:100%;
 	transition: 1s;
 	-moz-transition: 1s;
 	-webkit-transition: 1s;
@@ -25,16 +28,16 @@
 	position:absolute;
 	top:0;
 	left:0;
-	width: 100%;
+	
 }
 .siteWidth{
 	width:770px;
 	height:450px;
-	margin-left:280px;
+	/*margin-left:280px;*/
+	margin: auto;
+	text-align: center;
 }
-/*.siteWidth:nth-of-type(1){
-	opacity: 1;
-}*/
+
 .siteWidth img{
 	display: block;
 	width:100%;
@@ -43,7 +46,8 @@
 }
 .bannerNav{
 	position: absolute;
-	bottom:-60px;
+	/*bottom:-60px;*/
+	bottom:30px;
 	left:530px;
 }
 .bannerNav li{
@@ -53,6 +57,7 @@
 	opacity: .6;
 	float:left;
 	margin-right: 5px;
+	cursor: pointer;
 }
 .bannerNav li.banCor{
 	opacity: 1;
@@ -62,7 +67,8 @@
 	height:450px;
 	background: #fff;
 	position: absolute;
-	top:296px;
+	/*top:296px;*/
+	top:0;
 	right:78px;
 }
 .hd{
@@ -685,14 +691,27 @@
 	left:50%;
 	margin-left:-660px;
 	bottom:50px;
-	transition: 1s;
-	opacity: 0;
+	/*transition: 1s linear;*/
+	display: none;
+	transform-origin: left bottom;
+	animation: name .3s linear alternate;
+}
+@keyframes name{
+	from{
+		transform: scale(0);
+	}
+	to{
+		transform: scale(1);
+	}
 }
 .sideNav li{
 	width:40px;
 	height:40px;
 	margin-bottom: 1px;
 	background: #666;
+}
+.sideNav .side2:hover{
+	background:#ff6600;
 }
 .sideNav a{
 	display: block;
@@ -715,11 +734,67 @@
 .sideNav>a{
 	background: #8a8a8a;
 }
-.sideTop a img{
+.return_top img{
 	padding-left:5px;
 	padding-top:2px;
 }
-#sNav>li a.sideActive{
+.return_top{
+	cursor: pointer;
+}
+#sNav>li.sideActive{
 	background: #ff6600;
 	z-index: 999;
+}
+
+
+
+.topFixdiv{
+	width:100%;
+	height:52px;
+	background: #fff;
+	position: fixed;
+	top:0;
+	left:0;
+	z-index: 999;
+	border-bottom: 1px solid #ff6600;
+	display: none;
+	/*transition: .5s all ease;*/
+}
+.top-m{
+	width:1210px;
+	height:100%;
+	margin: auto;
+}
+.fixedImg{
+	width:320px;
+	height:48px;
+	float:left;
+}
+.fixedImg img{
+	display: block;
+	width:140px;
+	height:48px;
+}
+.fixedSearch{
+	width:600px;
+	height:34px;
+	margin:auto;
+	float:left;
+	margin-top:8px;
+}
+.fixedSearch input{
+	width:472px;
+	height:32px;
+	background: #f2f2f2;
+	color:#f2f2f2;
+	border:none;
+	outline: none;
+	font-size: 14px;
+	padding:10px;
+}
+.fixBtn{
+	width:70px;
+	height:32px;
+	background: #ff6600;
+	margin-left:-4px;
 }

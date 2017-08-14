@@ -109,11 +109,25 @@ window.onload = function(){
 	var num = 0;
 	var arr = ['#b316e6','#9d43fc','#f83259','#ffa258','#01b6c9','#000000'];
 	banLis[0].style.background = arr[0];
-	timer = setInterval(function(){
+	
+	banner.on('mouseover',function(){
+		clearInterval(timer);
+	})
+	banner.on('mouseout',function(){
+		timer = setInterval(play,2000)
+	})
+	
+	timer = setInterval(play,2000)
+	
+	function play(){
 		num++;
 		if(num == banLis.length){
 			num = 0;
 		}		
+		playPic();
+	}
+	
+	function playPic(){
 		for(var i=0;i<siteWidth.length;i++){
 			banLis[i].style.opacity= '0';
 			navLis[i].className = '';
@@ -121,7 +135,13 @@ window.onload = function(){
 		banLis[num].style.opacity= '1';
 		banLis[num].style.background = arr[num];
 		navLis[num].className = 'banCor';
-	},2000)
+	}
+	
+	navLis.on('click',function(){
+		num = $(this).index();
+		playPic();
+	})
+	
 	/*轮播图结束*/
 	
 	
@@ -259,45 +279,58 @@ window.onload = function(){
 	
 	
 	/*侧边导航栏开始*/
-	
-	$("#sNav").find('li').click(function(){
-		$(this).addClass("sideActive").siblings().removeClass("sideActive");
-		$("body").animate({
-			scrollTop : $('.firstF').height()*$(this).index()+1170+$(this).index()*30
+	var sideLi = $("#sNav").find('.side2');
+	sideLi.on('click',function(){
+//		$(this).addClass('sideActive').siblings().removeClass('sideActive')
+		$("body").animate({			
+//			+$(this).index()*30
+			scrollTop : $('.firstF').height()*$(this).index()+1170
 		},500)
-	})	
-
+	})
+	
 	$(window).scroll(function(){
 		var body = $('body');
 		var top = $(document).scrollTop();
 		var sideNav = $('.sideNav');	
 		var side = $('.side1');
 		var sA = $('#sNav').find('.sA');
+		var topFixdiv = $('.topFixdiv');
+//		if(body.scrollTop()>=500){
+//			sideNav.css({
+//				opacity : 1,
+//			})
+//		}else{
+//			sideNav.css({
+//				opacity : 0,
+//			})
+//		}
 		if(body.scrollTop()>=500){
-			sideNav.css({
-				opacity : 1,
-			})
+			sideNav.show()
 		}else{
-			sideNav.css({
-				opacity : 0,
-			})
+			sideNav.hide()
 		}
 		
-		side.each(function (i) {
-            var m = $(this);
-            //注意：m.offset().top代表每一个firstF的顶部位置
-            if (top > m.offset().top - 300) {
-//              itemId = "#" + m.attr("id");
-				sA.eq(i).addClass('sideActive').parent().siblings().find('.sA').removeClass('sideActive');
+		if(body.scrollTop()>=780){
+			topFixdiv.slideDown()
+		}
+		
+		if(body.scrollTop()<780){
+			topFixdiv.slideUp()
+		}
+		side.each(function(i){
+       		var m = $(this);
+       		if (top > m.offset().top - 300) {
+				$('.side2').eq(i).addClass('sideActive').siblings().removeClass('sideActive');
             } else {
                 return false;
             }
-        });
+       })
+       
         
        if(top<=1400){
-       	 sA.removeClass('sideActive');
+       	 $('.side2').eq(0).removeClass('sideActive');
        }
-        
+//     console.log(top)
 	})
 
 	
@@ -310,4 +343,17 @@ window.onload = function(){
 	inp.on('blur',function(){
 		$(this).attr('placeholder','网络K歌爆款套装享优惠')
 	})
+	
+	
+	
+	/*返回顶部*/
+	var returnTop = $('.return_top');
+	var getTop = $('.getTop');
+	 returnTop.click(function() {
+        $('html, body').animate({scrollTop: 0}, 1000);
+    });
+    getTop.click(function() {
+        $('html, body').animate({scrollTop: 0}, 1000);
+    });
+    
 }

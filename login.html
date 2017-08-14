@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>音平账号-登录</title>		
+		<link rel="shortcut icon" href="//www.ingping.com/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	</head>
+	<body>
+		<div class="login-header">
+			<div class="container clearfix">
+				<div class="login-logo">
+					<a href="https://www.ingping.com/">
+						<img src="img/ingping-1.0.0.png"/>
+					</a>
+				</div>
+				<div class="login-nav">
+					<ul>
+						<li class="col-md-3">
+							<a href="https://www.ingping.com/">
+								<img src="img/ingpingmall-1.0.0.png"/>
+							</a>
+							<span>
+								<img src="img/xiegang-1.0.0.png"/>
+							</span>
+						</li>
+						<li class="col-md-3">
+							<a href="https://zx.ingping.com/">
+								<img src="img/ingpingzixun-1.0.0.png"/>
+							</a>
+							<span>
+								<img src="img/xiegang-1.0.0.png"/>
+							</span>
+						</li>
+						<li class="col-md-3">
+							<a href="https://www.yshifu.com/">
+								<img src="img/yingshifu-1.0.0.png"/>
+							</a>
+							<span>
+								<img src="img/xiegang-1.0.0.png"/>
+							</span>
+						</li>
+						<li class="col-md-3">
+							<a href="http://www.ingping.cn/">
+								<img src="img/ingpinglexiang-1.0.0.png"/>
+							</a>
+							<span>
+								<img src="img/xiegang-1.0.0.png"/>
+							</span>
+						</li>
+						<li class="col-md-3">
+							<a href="http://zhidao.ingping.com/">
+								<img src="img/ingpingzhidao-1.0.0.png"/>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="bg">
+				<a href="login.html"></a>
+			</div>
+			<div class="login-form">
+				<h2>一个账号，玩转所有音平服务</h2>
+				<div class="login-kuang clearfix">
+					<div class="login-title">
+						<p>密码登录</p>
+					</div>
+					
+					<div class="login-user">
+						<input type="text" name="userName" placeholder="手机号/用户名/邮箱" id="userName">
+					</div>
+					<div class="login-pass">
+						<input type="text" name="password" placeholder="密码" id="password">
+					</div>
+					<div class="login-info" style="display: none;">
+						<p><em>!</em>请检查输入的用户名和密码是否正确</p>
+					</div>
+					<div class="login-chice clearfix">
+						<div class="forget">
+							<input type="checkbox"checked><label for="rememberMe">记住用户名</label>
+						</div>
+						<div class="wjmm">
+							<a href="https://passport.ingping.com/findPwd/index" target="_blank">忘记密码？</a>
+						</div>
+					</div>
+					<button id="login-btn">立即登录</button>
+					<div class="login-methods clearfix">
+						<span>合作伙伴账号登录:</span>
+						<div class="login-icon">
+							<a href="https://open.weixin.qq.com/connect/qrconnect?appid=wxd76b0d2bb0ff8e3f&redirect_uri=https%3A%2F%2Fpassport.ingping.com%2FquickLogin%2Fsuccess&state=4290c5de-51aa-4424-b3e9-d246e6b40abb&response_type=code&scope=snsapi_login#wechat_redirect" target="_blank">
+								<img src="img/weixinlogin.png"/>
+							</a>
+							<a href="https://passport.ingping.com/quickLogin/index?login_type=alipay&login_retUrl=https%3A%2F%2Fwww.ingping.com&fxPid=" target="_blank">
+								<img src="img/zfblogin.png"/>
+							</a>
+							<a href="https://graph.qq.com/oauth/show?which=Login&display=pc&client_id=219793&redirect_uri=https://passport.ingping.com/quickLogin/success&response_type=code&state=823bab0c4d18d2b5a679f118d43990c7&scope=get_user_info" target="_blank">
+								<img src="img/qqlogin.png"/>
+							</a>
+							<a href="https://api.weibo.com/oauth2/authorize?client_id=1704172239&redirect_uri=https://passport.ingping.com/quickLogin/success&response_type=code" target="_blank">
+								<img src="img/sinalogin.png"/>
+							</a>
+						</div>
+						
+					</div>
+					<button id="register">注册音平账号</button>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer-content">
+				<ul class="footer1 clearfix">
+					<li><a href="http://www.ingping.com/help/detail/21/26" target="_blank" class="col">关于我们</a></li>
+					<em>|</em>
+					<li><a href="http://www.ingping.com/help/detail/22/26" target="_blank" class="col">联系我们</a></li>
+				</ul>
+				
+		        <p class="p1">增值电信业务经营许可证：粤B2-20110237 | 粤ICP备11032710号-1</p>
+		        <p class="p2">&copy;2011-2017 音平公司版权所有，并保留所有权利（著作权及商标声明）。</p>
+
+			</div>
+		</div>
+		
+		<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

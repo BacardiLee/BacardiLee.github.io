@@ -6,7 +6,6 @@
 .mui-mbar-tabs{
 	width:30px;
 	height:100vh;
-	background: blue;
 	position: fixed;
 	top:0;
 	right:0;
@@ -703,6 +702,7 @@ header a,header a img{
 	line-height: 40px;
 	font-size:14px;
 	padding-left:10px;
+	margin-left:10px;
 	position: relative;
 }
 .mainNav .mainHeader .headerNav .classsify p a{
@@ -928,8 +928,12 @@ header a,header a img{
 /*主体*/
 .content{
 	width:100%;
+	height:450px;
 }
-
+/*.banner,.bannerList{
+	width:100%;
+	height:100%;
+}*/
 /*页脚*/
 footer{
 	width:100%;
