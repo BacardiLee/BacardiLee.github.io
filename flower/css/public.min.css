@@ -1,0 +1,96 @@
+*{margin:0;padding:0}
+body{font-family:"微软雅黑"}
+.box{min-width:1200px}
+li{list-style:none}
+a,a:hover{text-decoration:none}
+.clearfix:after,.clearfix:before{content:"";display:table;clear:both}
+.clearfix:after{*zoom:1}
+.nav{width:100%;height:35px;background:#f2f2f2;line-height:35px;padding:0px 70px;box-sizing:border-box;font-size:12px;color:#737373}
+.nav a{color:#737373}
+.nav a:hover{color:#ff6a00;text-decoration:none}
+.nav .left-nav{float:left;box-sizing:border-box}
+.nav .left-nav i{display:inline-block;width:24px;height:24px;background:url(../img/common_z.png) no-repeat;position:relative;top:8px}
+.nav>.left-nav>li:nth-of-type(1) i{background-position:0 -318px}
+.nav>.left-nav>li:nth-of-type(2) i{background-position:-374px -134px}
+.nav>.left-nav>li:nth-of-type(3) i{background-position:-298px -173px}
+.nav>.left-nav>li{float:left;padding:0 10px;position:relative}
+.nav>.left-nav>li>ul{width:160px;border:1px solid #f2f2f2;text-align:center;display:none;position:absolute;left:-1px;top:35px;background:#fff;padding:13px;box-sizing:border-box;z-index:999}
+.nav>.left-nav>li:hover{border:1px solid #f2f2f2;border-bottom:none;background:#fff}
+.nav>.left-nav>li:nth-of-type(1):hover{background:#f2f2f2}
+.nav .left-nav li .border{border:0}
+.nav>.left-nav>li:hover ul{border-top:none;display:block}
+.nav>.left-nav>li>ul>li>img{display:block;width:120px;height:120px}
+.nav .right-nav{float:right}
+.nav>.right-nav>li{float:left;padding:0 8px;position:relative;}
+.nav>.right-nav>li>ul{position:absolute;left:-2px;top:35px;width:80px;text-align:center;opacity:0;background:#fff;border:1px solid #ccc;border-top:none;}
+.nav>.right-nav>li:hover ul{opacity:1;z-index:10000}
+.nav>.right-nav>.checkeds:hover{border: 1px solid #ccc;border-bottom: none;background: white;}
+.nav>.right-nav>li>ul>li{height:25px;line-height:25px}
+.nav>.right-nav>li>ul>li>a:hover{text-decoration:underline}
+.nav .right-nav #car{color:#F60;font-size:16px}
+.nav .right-nav .car{display:none;text-align:center;line-height:100px;width:300px;background:#fff;height:100px;position:absolute;right:-2px;top:35px;border:1px solid #ccc;border-top: none;}
+.nav .right-nav li:hover .car{display:block;z-index:10}
+.logo{width:100%;height:120px;padding-left:76px;position:relative}
+.logo .left-logo{width:369px;height:69px;position:absolute;top:28px}
+.logo .left-logo h3{display:inline-block}
+.logo .left-logo img{width:224px;height:69px;position:absolute;left:0;top:0}
+.logo .left-logo span{display:inline-block;width:1px;height:35px;background:#ccc;position:absolute;right:136px;top:12px}
+.logo .left-logo p{width:150px;font-size:14px;position:absolute;right:-20px;top:10px}
+.logo .center-logo{position:absolute;left:574px;top:40px}
+.center-logo a{color:#AEAEAE}
+.center-logo .search{color:#fff;background:#ff6a00;cursor:pointer}
+.center-logo p{margin-top:-10px}
+.center-logo p a{padding:0 5px;display:inline-block;height:15px;line-height:15px;border-right:1px solid #ccc}
+.center-logo p a:last-of-type{border:none}
+.center-logo p a:hover{color:#ff6a00}
+.center-logo .listKey{width:100%;border:1px solid #ccc}
+.center-logo .listKey ul{border:1px solid #ccc;position:absolute;width:100%;color:#000;display:none;z-index:10000}
+.center-logo .listKey li a{color:#000}
+.center-logo .listKey li{width:100%;height:30px;line-height:30px;text-indent:1em;border-bottom:1px solid #ccc}
+.right-logo{position:absolute;right:50px;top:40px}
+.right-logo li{padding:0 5px;float:left}
+.right-logo li i{display:block;width:1px;height:15px;background:#737373;position:relative;top:3px}
+.right-logo a{color:#737373}
+.right-logo a:hover,.right-logo span{color:#ff6a00}
+
+.index{width:1200px;height:21px;margin:0 auto;padding:0 50px}
+.index li a{color:#737373;font-size:14px}
+.index li a:hover{color:#FF6A00}
+.index li{float:left;height:21px;padding:0 34px;line-height:21px;border-right:1px solid #e0d9d9}
+.index li:last-of-type{border:none}
+.link{width:1200px;height:185px;margin:0 auto;padding:27px 80px 33px;box-sizing:border-box}
+.link li{float:left;margin-right:10px}
+.link li img{display:block;height:48px}
+.link p,.link p a{color:#737373}
+.link a:hover{color:#FF6A00}
+.link p{text-align:center}
+.link .firstP,.link .secondP{position:relative;top:20px}
+.friendLink{width:1200px;height:75px;margin:0 auto}
+.friendLink ul{width:1200px;height:65px;border-top:1px solid #DCDCDC;border-bottom:1px solid #DCDCDC}
+.friendLink li{float:left;line-height:65px;margin-right:8px}
+.friendLink li a{color:#737373;font-size:13px}
+.friendLink li a:hover{color:#FF6A00}
+.aside-nav{width:35px;height:100vh;background:#595656;color:#fff;position:fixed;right:0;top:0;padding-top:110px;z-index:999}
+.aside-nav li{padding:10px 5px;margin-top:10px;position:relative}
+.aside-nav li:hover{background:#FF6A00}
+.aside-nav li:first-of-type div{width: 300px;height: 160px;text-align: center;box-sizing:border-box;}
+.aside-nav li:first-of-type div a{color: #FF6A00;font-size: 12px;display: inline-block;}
+.aside-nav li:first-of-type div img{display: block;width: 80px;height: 80px;border-radius: 50%;margin-top: 20px;margin-left: 120px;}
+.aside-nav li:first-of-type div  p:last-of-type{width: 300px;height: 30px;background: #eee;line-height: 30px;}
+.aside-nav li:first-of-type div  p:last-of-type a{color: #737373;}
+.aside-nav li:nth-of-type(7) div img{display: inline-block;}
+.aside-nav li:nth-of-type(7) div p{float: left;}
+.aside-nav li:nth-of-type(7) div{width: 400px;height: 150px;top: -110px;padding-top: 20px;padding-left: 30px;}
+.aside-nav li div{width: 100px;height: 42px;position: absolute;right: 35px;top: 0;background: white;display: none;color: black;font-size: 12px; text-align: center;line-height: 42px;}
+.aside-nav li:last-of-type div a{color:#000; font-size: 12px;line-height: 42px;}
+.aside-nav li:nth-of-type(7) div:after{top: 130px;}
+.aside-nav li:first-of-type div:after{top: 20px;}
+.aside-nav li div:after {  content: ''; width: 0px; height: 0px; border: 3px solid transparent; border-left: 4.5px solid white; position: absolute;top: 50%;right: -6px;transform: translateY(-50%);}
+.aside-nav li:hover div{animation: slides 0.5s linear ;display: block;}
+@keyframes slides{from{transform: translateX(-40px);}to{transform:translateX(0) ;}}
+.aside-nav .mylist{background:url(../img/ibar_sprites.png) no-repeat;background-position:-46px -81px}
+.aside-nav li:hover .count{background:#fff;color:#FF6A00}
+.aside-nav a{display:block;color:#fff;text-align:center;line-height:20px;font-size:18px;font-style: normal;}
+.aside-nav a:hover{color:#fff;text-decoration:none}
+.aside-nav li a .shoppingCar{font-size:13px}
+.aside-nav li a .count{display:block;width:20px;height:20px;border-radius:20px;background:#FF6A00;position:relative;top:5px;left:3px}

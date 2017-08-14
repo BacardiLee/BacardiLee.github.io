@@ -1,0 +1,49 @@
+.banner{width:100%;height:482px;position:relative}
+.banner .top-nav a{float:left;color:#000;font-weight:bolder;padding:0 25px}
+.top-nav a:hover{color:#ff6a00;text-decoration:none}
+.banner .bannerPic{width:100%;height:445px;margin-top:-10px;overflow:hidden;position:relative}
+.banner .bannerPic .slide{width:100%;height:100%;position:relative}
+.banner .bannerPic .slide li{width:100%;height:100%;float:left;position:absolute;left:0;top:0;transition:1s;opacity:1}
+.banner .slide .index_banner{z-index:10}
+.banner .bannerPic .slide li img{display:block;width:100%;height:100%;border:none}
+.banner .point{position:absolute;left:628px;bottom:10px;z-index:999}
+.banner .point li{float:left;width:15px;height:15px;border-radius:50%;background:#999;opacity:.3;margin-right:10px}
+.banner .point .active{background:#F56600}
+.banner .top-nav{width:100%;height:37px;line-height:37px;padding-left:76px;border-bottom:3px solid #2c3448}
+.banner .top-nav li:first-of-type a{display:inline-block;width:232px;text-align:center;color:#fff;background:#585657}
+.ysh_brand{width:1200px;height:516px;margin:0 auto}
+.ysh_brand li{float:left;margin-right:5px;margin-top:5px}
+.ysh_brand img{display:block;width:395px;height:248px;border:none}
+.ysh_all{width:1200px;height:388px;margin:0 auto}
+.ysh_all p{width:100%;height:31px;text-align:center;line-height:31px;background:#fafafa}
+.ysh_all p a{color:#737373;font-size:12px}
+.ysh_all .ysg_bg{width:100%;height:347px}
+.ysh_brand .ysg_bg img{display:block;border:none;width:100%;height:347px}
+.ysh_list{width:1200px;margin:0 auto;height:527px}
+.ysh_list .ysh_top_list{width:100%;height:78px;border-bottom:3px solid #DCDCDC;box-sizing:border-box}
+.ysh_list .ysh_top_list h4{width:100%;height:44px;line-height:44px}
+.ysh_list .ysh_top_list p{width:100%;height:34px;margin-top:-10px;font-size:12px}
+.ysh_list .ysh_top_list p a{width:73px;height:25px;text-align:center;line-height:25px;color:#fff;background:#585657;float:right;cursor:pointer}
+.ysh_list .ysh_list_all{width:100%;height:440px;padding-top:12px}
+.ysh_list .ysh_list_all .ysh_left_list{width:315px;height:100%;float:left}
+.ysh_list .ysh_list_all .ysh_left_list img{display:block;height:427px;width:295px}
+.ysh_list .ysh_list_all .ysh_right_list{width:885px;height:100%;float:right}
+.ysh_list .ysh_list_all .ysh_right_list img{display:block;height:348px;width:265px}
+.ysh_list .ysh_list_all .ysh_right_list .ysh_slide{height:427px;width:860px;margin:0 auto;position:relative;overflow:hidden}
+.ysh_list .ysh_list_all .ysh_right_list .ysh_slide ul{width:2520px;height:427px;position:absolute;left:0;top:0}
+.ysh_list .ysh_list_all .ysh_right_list li{height:427px;width:270px;float:left;margin-left:15px;text-align:center}
+.ysh_list .ysh_list_all .ysh_right_list li .ysh_box{display:block;margin-top:10px}
+.ysh_list .ysh_list_all .ysh_right_list li .special-box{color:#F60}
+.ysh_list .ysh_list_all .ysh_right_list li .price{margin-top:5px;display:block}
+.ysh_list .ysh_list_all .ysh_right_list li a{color:#B3B3B3}
+.ysh_list .ysh_list_all .ysh_right_list li a:hover{color:#FF6A00;text-decoration:none}
+.ysh_list .ysh_list_all .ysh_right_list .ysh_slide .ysh_next,.ysh_list .ysh_list_all .ysh_right_list .ysh_slide .ysh_prev{position:absolute;top:156px;width:30px;height:30px;border-radius:50%;background:#ececec;text-align:center;line-height:30px;color:#fff;z-index:1000;cursor:pointer}
+.ysh_list .ysh_list_all .ysh_right_list .ysh_slide .ysh_prev{left:0}
+.ysh_list .ysh_list_all .ysh_right_list .ysh_slide .ysh_next{right:0}
+.ysh_article{width:1200px;height:229px;margin:0 auto;margin-bottom:20px;border-bottom:1px solid #D9D9D9}
+.ysh_article h5{width:100%;height:51px;line-height:51px;text-indent:25px;background:#EBEBEB}
+.ysh_article ul{width:384px;height:152px;float:left;list-style-type:disc;list-style-position:inside;font-size:13px}
+.ysh_article ul:nth-of-type(2){border-left:1px solid #dcdcdc;border-right:1px solid #dcdcdc}
+.ysh_article ul li{text-indent:35px;list-style-type:disc;list-style-position:inside;height:30px;line-height:30px}
+.ysh_article ul li a{color:#737373}
+.ysh_article ul li a:hover{color:#FF6A00}

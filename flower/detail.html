@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/tools.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/detail.min.css" />
+		<script src="js/jsonp.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if IE]>
+			<script src="js/html5shiv.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/respond.js" type="text/javascript" charset="utf-8"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="box" id="box">
+			<!--nav-->
+			<div class="nav clearfix">
+				<ul class="left-nav clearfix">
+					<li class="border">
+						<a href="javascript:;"><i></i><span>收藏鲜花网(hua.com)</span></a>
+					</li>
+					<li>
+						<a href="javascript:;"><i></i><span>关注微信</span></a>
+						<ul>
+							<li><img src="img/wechat_qrcode.jpg" /></li>
+							<li>扫码关注</li>
+							<li>回复"礼物" 更多惊喜</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;"><i></i><span>花礼网</span></a>
+						<ul>
+							<li><img src="img/app_qrcode.jpg" /></li>
+							<li>新人专享100元APP礼包</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="right-nav ">
+					<li>
+						<a href="login.html">你好，请登录</a>
+					</li>
+					<li>
+						<a href="register.html">注册</a>
+					</li>
+					<li class="border-right">|</li>
+					<li>
+						<a href="javascript:;">订单查询</a>
+					</li>
+					<li class="border-right">|</li>
+					<li>
+						<a href="javascript:;">我的花礼</a>
+					</li>
+					<li class="border-right">|</li>
+					<li class="checkeds">
+						<a href="javascript:;">客户服务<span class="glyphicon glyphicon-triangle-bottom"> </span></a>
+						<ul>
+							<li>
+								<a href="javascript:;">在线付款</a>
+							</li>
+							<li>
+								<a href="javascript:;">帮助中心</a>
+							</li>
+							<li>
+								<a href="javascript:;">售后服务</a>
+							</li>
+							<li class="ranges">
+								<a href="javascript:;">配送范围</a>
+							</li>
+							<li class="ranges">
+								<a href="javascript:;">留言反馈</a>
+							</li>
+						</ul>
+					</li>
+					<li class="border-right">|</li>
+					<li class="checkeds checkedsone">
+						<a href="javascript:;"><span class="glyphicon glyphicon-shopping-cart" id="car"></span>&nbsp;&nbsp;购物车<span>(0)</span><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+						<div class="car">
+							您的购物车中还没有商品，快去选购吧！
+						</div>
+					</li>
+					<li class="border-right">|</li>
+					<li>
+						<a href="javascript:;">永生花</a>
+					</li>
+				</ul>
+			</div>
+			<!--logo-->
+			<div class="logo ">
+				<div class="left-logo">
+					<h3><a href="javascript:;"><img src="img/logo.png"/></a></h3>
+					<span id=""></span>
+					<p>中国鲜花礼品网 <i>始于2005，简称花礼网</i></p>
+				</div>
+				<div class="center-logo">
+					<div class="form-group">
+						<form class="form-inline">
+							<div class="input-group searchKey">
+								<input type="text" class="form-control input " id="txt" placeholder="商品关键词">
+								<div class="input-group-addon search" id="btn">搜索</div>
+							</div>
+							<div class="listKey">
+								<ul id="keyList">
+
+								</ul>
+							</div>
+						</form>
+
+					</div>
+					<p>
+						<a v-for="item of arr.logo" href="javascript:;">{{item}}</a>
+					</p>
+				</div>
+				<div class="right-logo">
+					<ul>
+						<li><span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;400-800-2223</li>
+						<li><i></i></li>
+
+						<li>
+							<a href="javascript:;"><span class="glyphicon glyphicon-headphones"></span>&nbsp;&nbsp;在线客服</a>
+						</li>
+					</ul>
+
+				</div>
+
+			</div>
+			<!--banner-->
+			<div class="detail_nav">
+				<ul class="top-nav" class="clearfix">
+					<li class="actived">
+						<span class="glyphicon glyphicon-triangle-bottom" style="color: white;"></span>
+						<a href="#">全部商品导购</a>
+						<div class="left-list ">
+							<div class="flower-list">
+								<p>
+									<a>鲜花用途</a>
+								</p>
+								<ul class="clearfix">
+									<li v-for="item of arr.flower1">
+										<a href="javascript:;">{{item}}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="flower-list">
+								<p>
+									<a>鲜花花材</a>
+								</p>
+								<ul class="clearfix">
+									<li v-for="item of arr.flower2">
+										<a href="javascript:;">{{item}}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="flower-list">
+								<p class="checked">
+									<a href="">鲜花类别</a>
+								</p>
+								<ul class="clearfix">
+									<li v-for="item of arr.flower3">
+										<a href="javascript:;">{{item}}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="flower-list">
+								<p class="checked">
+									<a href=" ">永生花</a>
+								</p>
+								<ul class="clearfix">
+									<li v-for="item of arr.flower4">
+										<a href="javascript:;">{{item}}</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="flower-list">
+								<p class="checked">
+									<a href="javascript:;">蛋糕</a>
+								</p>
+								<ul class="clearfix">
+									<li v-for="item of arr.flower5">
+										<a href="javascript:;">{{item}}</a>
+									</li>
+								</ul>
+							</div>
+							<div class="flower-list">
+								<p class="checked">
+									<a href="javascript:;">礼品/公仔/绿植</a>
+								</p>
+							</div>
+						</div>
+
+					</li>
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="javascript:;">鲜花</a>
+					</li>
+					<li>
+						<a href="ysh.html">永生花</a>
+					</li>
+
+					<li>
+						<a href="javascript:;">礼品</a>
+					</li>
+					<li>
+						<a href="javascript:;">巧克力</a>
+					</li>
+					<li>
+						<a href="javascript:;">花语大全</a>
+					</li>
+					<li>
+						<a href="javascript:;">企业团购</a>
+					</li>
+					<li>
+						<a href="javascript:;">巨蟹座鲜花礼物</a>
+					</li>
+				</ul>
+
+			</div>
+
+			<!--detail_wrap-->
+			<div class="detail_wrap">
+				<div class="detail_content">
+					<ul class="detail_nav clearfix">
+						<li>
+							<a href="index.html">首页</a>&gt;</li>
+						<li>
+							<a href="">鲜花</a>&gt;</li>
+						<li>爱是唯一</li>
+					</ul>
+					<div class="detail_des">
+						<div class="detail_des_left">
+							<ul class="detail_big_img">
+							</ul>
+							<ul class="detail_small_img clearfix">
+							</ul>
+							<span class="detail_prev glyphicon glyphicon-menu-left"></span>
+							<span class="detail_next glyphicon glyphicon-menu-right"></span>
+						</div>
+						<div class="detail_des_right">
+
+						</div>
+					</div>
+				</div>
+				<div class="detail_hot clearfix">
+					<div class="detail_hot_left">
+						<div class="detail_record">
+							<p>浏览记录</p>
+							暂无任何记录
+						</div>
+						<div class="detail_commend">
+							<p>热销推荐</p>
+							<ul class="clearfix">
+
+							</ul>
+						</div>
+					</div>
+					<div class="detail_hot_right">
+						<div class="detail_info">
+							<ul class="detail_public_nav clearfix" id="datail_nav">
+								<li>
+									<a href="javascript:;">商品详情</a>
+								</li>
+								<li>
+									<a href="javascript:;">用户评价</a>
+								</li>
+								<li>
+									<a href="javascript:;">订单实拍</a>
+								</li>
+								<li>
+									<a href="javascript:;">送花故事</a>
+								</li>
+								<li>
+									<a href="javascript:;">购物保障</a>
+								</li>
+							</ul>
+							<span class="detail_color">￥286</span>
+							<a href="javascript" class="detail_purchase"><span class="glyphicon glyphicon-shopping-cart"></span>立即购买</a>
+						</div>
+						<div class="detail_slide_nav">
+							<div class="detail_product" id="Details">
+								<ul class="detail_public_nav public_nav clearfix">
+									<li class="detail_active">
+										<a href="#Details">商品详情</a>
+									</li>
+									<li>
+										<a href="#Coment">用户评价</a>
+									</li>
+									<li>
+										<a href="#List">订单实拍</a>
+									</li>
+									<li>
+										<a href="#Story">送花故事</a>
+									</li>
+									<li>
+										<a href="#Server">购物保障</a>
+									</li>
+								</ul>
+								<div class="detail_show" id="detail_show">
+
+								</div>
+
+							</div>
+							<div class="detail_commit" id="Coment">
+								<ul class="detail_public_nav public_nav clearfix">
+									<li>
+										<a href="#Details">商品详情</a>
+									</li>
+									<li class="detail_active">
+										<a href="#Coment">用户评价</a>
+									</li>
+									<li>
+										<a href="#List">订单实拍</a>
+									</li>
+									<li>
+										<a href="#Story">送花故事</a>
+									</li>
+									<li>
+										<a href="#Server">购物保障</a>
+									</li>
+								</ul>
+								<div class="detail_show clearfix" id="detail_coment">
+								</div>
+							</div>
+							<div class="detail_List" id="List">
+								<ul class="detail_public_nav public_nav clearfix">
+									<li>
+										<a href="#Details">商品详情</a>
+									</li>
+									<li>
+										<a href="#Coment">用户评价</a>
+									</li>
+									<li class="detail_active">
+										<a href="#List">订单实拍</a>
+									</li>
+									<li>
+										<a href="#Story">送花故事</a>
+									</li>
+									<li>
+										<a href="#Server">购物保障</a>
+									</li>
+								</ul>
+								<div class="detail_show" id="detail_list">
+									<p>
+										我们提供数十个城市的订单实拍展示，让您真是感知订单的制作效果。照片由各地连锁店配送前拍取，只求真实， 未做修饰，图片在光线，角度，背景等方面的瑕疵在所难免。 我们花艺师深知没有最好，只有更好，一直致力于用心制作更具气质的花礼。
+									</p>
+									<ul class="clearfix">
+									</ul>
+									<p>第一页<span>上一页</span><span>下一页</span>页次：<span>1</span>/<span>432</span> （共有2157条订单实拍秀）【最近所有实拍秀】 【查看本商品实拍秀】</p>
+								</div>
+
+							</div>
+							<div class="detail_story" id="Story">
+								<ul class="detail_public_nav public_nav clearfix">
+									<li>
+										<a href="#Details">商品详情</a>
+									</li>
+									<li>
+										<a href="#Coment">用户评价</a>
+									</li>
+									<li>
+										<a href="#List">订单实拍</a>
+									</li>
+									<li class="detail_active">
+										<a href="#Story">送花故事</a>
+									</li>
+									<li>
+										<a href="#Server">购物保障</a>
+									</li>
+								</ul>
+								<div class="detail_show" id="detail_story">
+									<img src="img/story.gif" />
+									<ul class="clearfix ">
+									</ul>
+									<p>第一页<span>上一页</span><span>下一页</span>页次：<span>1</span>/<span>432</span> </p>
+								</div>
+
+							</div>
+							<div class="detail_server" id="Server">
+								<ul class="detail_public_nav public_nav">
+									<li>
+										<a href="#Details">商品详情</a>
+									</li>
+									<li>
+										<a href="#Coment">用户评价</a>
+									</li>
+									<li>
+										<a href="#List">订单实拍</a>
+									</li>
+									<li>
+										<a href="#Story">送花故事</a>
+									</li>
+									<li class="detail_active">
+										<a href="#Server">购物保障</a>
+									</li>
+								</ul>
+								<div class="detail_show">
+									<ul class="detail_slide">
+
+									</ul>
+									<ul class="detail_server_img">
+
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!--index-->
+			<div class="index">
+				<ul class="clearfix">
+					<li v-for="item of arr.index">
+						<a href="javascript:;"><i></i>{{item}}</a>
+					</li>
+				</ul>
+			</div>
+			<!--link-->
+			<div class="link">
+				<ul class="clearfix">
+					<li>
+						<a href="javascript:;"><img src="img/cxwz.gif" /></a>
+					</li>
+					<li>
+						<a href="javascript:;"><img src="img/cxwz.png" /></a>
+					</li>
+					<li>
+						<a href="javascript:;"><img src="img/smyz.gif" /></a>
+					</li>
+					<li>
+						<a href="javascript:;"><img src="img/slogan.png" /></a>
+					</li>
+					<li>
+						<a href="javascript:;"><img src="img/zfb.gif" /></a>
+					</li>
+					<li>
+						<a href="javascript:;"><img src="img/100.jpg" /></a>
+					</li>
+					<li>
+						<a href="javascript:;"><img src="img/bico1.jpg" /></a>
+					</li>
+					<li>
+						<a href="javascript:;"><img src="img/bico3.jpg" /></a>
+					</li>
+					<li>
+						<a href="javascript:;"><img src="img/bico4.jpg" /></a>
+					</li>
+				</ul>
+				<p class="firstP">
+					<a href="javascript:;">中国花卉协会会员</a>
+					<a href="javascript:;">中国电子商务协会会员 </a> ICP经营许可证：
+					<a href="javascript:;">粤B2-20050744</a> |
+					<a href="javascript:;">粤ICP备09171662号</a><i></i> 粤公网安备44030502000373号 Copyright © 2005-2017</p>
+				<p class="secondP">花礼网 （中国鲜花礼品网）
+					<a>www.hua.com</a> 深圳市百易信息技术有限公司 中国鲜花网领先品牌，鲜花速递专家！</p>
+			</div>
+			<!--firendLink-->
+			<div class="friendLink">
+				<ul class="clearfix">
+					<li>友链</li>
+					<li v-for="item of arr.friendLink">
+						<a href="javascript:;"><i></i>{{item}}</a>
+					</li>
+				</ul>
+			</div>
+			<div class="aside-nav">
+				<ul>
+					<li>
+						<a href="javascript:;">
+							<span class="glyphicon glyphicon-user"></span>
+						</a>
+						<div>
+							<img src="img/avatar_none.jpg">
+							<p>你好! 请
+								<a href="login.html"> 登录 </a> |
+								<a href="register.html"> 注册 </a>
+							</p>
+							<p>
+								<a href="javascript:;"><i class="glyphicon glyphicon-file"></i>暂无订单</a>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="javascript:;"><span class="glyphicon glyphicon-shopping-cart"></span class="shoppingCar">购物车<span class="count">1</span></a>
+
+					</li>
+					<li>
+						<a href="javascript:;"><span class="glyphicon glyphicon-heart-empty"></span></a>
+						<div>我的收藏</div>
+					</li>
+					<li>
+						<a href="javascript:;"><span class="glyphicon glyphicon-time"></span></a>
+						<div>最近查看</div>
+					</li>
+					<li>
+						<a href="javascript:;"><span class="glyphicon glyphicon-earphone"></span></a>
+						<div>400-889-8888</div>
+					</li>
+					<li>
+						<a href="javascript:;"><span class="glyphicon glyphicon-headphones"></span></a>
+						<div>在线客服</div>
+					</li>
+					<li>
+						<a href="javascript:;"><span class="glyphicon glyphicon-qrcode"></span></a>
+						<div>
+
+							<p>
+								<img src="img/QR_wx.jpg" /> 下载微信公众号
+							</p>
+							<p>
+								<img src="img/QR_app.jpg" /> 下载app
+							</p>
+
+						</div>
+					</li>
+					<li>
+						<a href="javascript:;"><span class="glyphicon glyphicon-comment"></span></a>
+						<div>功能反馈</div>
+					</li>
+					<li>
+						<a href="javascript:;"><span class="glyphicon glyphicon-menu-up"></span></a>
+						<div>
+							<a href="javascript:;">返回顶部</a>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</body>
+
+</html>
+<script src="js/mainVue.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/detail.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/public.js" type="text/javascript" charset="utf-8"></script>

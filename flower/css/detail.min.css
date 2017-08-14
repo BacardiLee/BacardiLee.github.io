@@ -1,0 +1,119 @@
+
+
+.top-nav{width:100%;height:37px;line-height:37px;padding-left:76px;background:#fe7a24;position:relative}
+.top-nav>li{height:37px;float:left;position:relative}
+.top-nav .actived{padding:0 31px;background:#FF6A00}
+.top-nav>li> a{float:left;color:#fff;padding:0 25px;font-weight:bolder}
+.top-nav a:hover{text-decoration:none}
+.top-nav >li>.left-list{width:210px;height:626px;z-index:100;text-indent:12px;display:none;border:3px solid #000;background:#fff;position:absolute;left:0;top:37px}
+.top-nav >li:hover .left-list{display:block}
+.left-list p a{font-size:17px;font-weight:bolder;color:#F56600}
+.top-nav >li>.left-list> .flower-list{width:180px;margin-left:12px;border-bottom:1px solid #ccc;box-sizing:border-box}
+.top-nav >li>.left-list> .flower-list>ul> li{float:left}
+.top-nav >li>.left-list>.flower-list>ul> li> a{color:#000;font-size:12px}
+.top-nav >li>.left-list> .flower-list>ul> li> a:hover{color:#FF6A00}
+.flower-list ul{margin-top:-5px}
+.top-nav >li>.left-list >.flower-list:last-of-type{border:none}
+.detail_wrap{width:1200px;margin:0 auto}
+.detail_content{width:100%;height:777px}
+.detail_nav{width:100%;height:38px}
+.detail_nav li{float:left;line-height:38px}
+.detail_nav li:first-of-type a{color:#000}
+.detail_nav li:nth-of-type(2) a{color:#737373}
+.detail_nav li:nth-of-type(3){color:#FF6A00}
+.detail_des{width:100%;height:740px;border:1px solid #DCDCDC;box-sizing:border-box;margin-top:-10px}
+.detail_des_left{width:582px;height:100%;float:left;position:relative}
+.detail_des_left .detail_big_img{width:430px;height:469px;position:absolute;top:20px;left:70px}
+.detail_des_left .detail_big_img li{width:100%;height:100%;position:absolute;left:0;top:0}
+.show{display:block}
+.hide{display:none}
+.detail_des_left .detail_small_img{width:100%;height:69px;position:absolute;left:69px;bottom:170px}
+.detail_des_left .detail_small_img li{width:71px;height:71px;float:left;margin-left:30px;border:1px solid #737373;box-sizing:border-box;margin-top:20px}
+.detail_des_left .detail_small_img .active{border:2px solid orange}
+.detail_des_left .detail_small_img img{display:block;width:68px;height:68px}
+.detail_des_left .detail_big_img img{display:block;width:430px;height:469px}
+.detail_next,.detail_prev{display:block;width:210px;height:469px;position:absolute;top:20px;line-height:469px;color:#ccc;font-size:30px;cursor:pointer;opacity:0;z-index:1000}
+.detail_prev{left:70px}
+.detail_next{right:70px;text-indent:170px}
+.detail_des_right{padding-top:28px;width:616px;height:100%;float:right;padding-left:20px;padding-right:30px;color:#737373}
+.detail_des_right ul{font-size:12px;width:558px;height:297px;border-top:1px solid #d9d9d9;border-bottom:1px solid #d9d9d9;padding-top:20px;margin-bottom:20px}
+.detail_des_right ul li{margin-top:10px}
+.detail_des_right ul li span{margin-left:20px}
+.detail_des_right p a{color:#737373}
+.detail_price a{text-decoration:line-through}
+.detail_new_price{color:#FF6A00;font-weight:700}
+.detail_sales{width:558px;height:48px;line-height:48px;text-indent:12px;background:#f7f7f7;margin-top:10px}
+.detail_sales span{margin-left:10px}
+.detail_purchase{width:161px;height:48px;display:inline-block;background:#FF6A00;color:#fff;font-size:16px;text-align:center;line-height:48px;margin-right:30px}
+.detail_purchase span{margin-right:10px}
+.detail_collect{color:#737373}
+.detail_collect span{color:#ffba89;margin-right:10px}
+.detail_des_right>dl{margin-top:70px}
+.detail_des_right>dl>dd{width:24px;height:24px;margin-right:10px;float:left}
+.detail_des_right>dl>dd>i{width:24px;height:24px;background:url(../img/link.png) no-repeat;float:left}
+.detail_des_right>dl>dd:nth-of-type(1)>i{background-position:0 -2444px}
+.detail_des_right>dl>dd:nth-of-type(2)>i{background-position:0 -2650px}
+.detail_des_right>dl>dd:nth-of-type(3)>i{background-position:0 -1611px}
+.detail_des_right>dl>dd:nth-of-type(4)>i{background-position:0 -105px}
+.detail_des_right>dl>dd:nth-of-type(5)>i{background-position:0 -52px}
+.detail_des_right>dl>dd:nth-of-type(6)>i{background-position:0 0}
+.detail_hot{width:100%;margin-top:10px;color:#999}
+.detail_hot a{color:#737373}
+.detail_hot_left{width:212px;float:left}
+.detail_record{width:100%;height:73px;border:1px solid #d9d9d9}
+.detail_record p{width:100%;height:31px;text-align:center;line-height:31px;background:#ffe8d9}
+.detail_commend{width:100%;border:1px solid #d9d9d9;margin-top:23px;text-align:center}
+.detail_commend p{width:100%;height:31px;text-align:center;line-height:31px;background:#ffe8d9}
+.detail_commend li img{width:100%;display:block}
+.detail_commend li:last-of-type{border:none}
+.detail_commend li{margin-left:7px;width:192px;height:299px;border-bottom:1px solid #d9d9d9}
+.detail_color{color:#FF6A00;display:block}
+.detail_hot_right{width:970px;float:right;:color #737373}
+.detail_hot_right .detail_info{width:970px;height:42px;background:#fff;position:fixed;top:0;left:305px;border-bottom:1px solid #707070;box-sizing:border-box;display:none;z-index:111000}
+.detail_info .detail_purchase{color:#fff;height:42px;line-height:42px;float:right;position:absolute;right:-30px;top:0}
+.detail_info .detail_color{position:absolute;top:0;left:750px;line-height:42px;font-size:16px;font-weight:bolder}
+.detail_public_nav{width:100%;height:42px;border-bottom:1px solid #000}
+.detail_public_nav li{width:107px;height:100%;text-align:center;line-height:42px;float:left;border:1px solid #D9D9D9;margin-right:-1px}
+.detail_hot_right .detail_active{border-top:1px solid #000;border-bottom:none}
+.detail_hot_right .detail_show{width:100%;border-bottom:1px solid #D9D9D9;border-left:1px solid #D9D9D9;border-right:1px solid #D9D9D9;margin-top:-10px}
+#Details img{padding-top:20px;padding-left:134px;display:block;width:769px;padding-bottom:20px}
+#Coment{margin-top:20px}
+#Coment dl{width:921px;height:160px;margin-left:22px;border-bottom:1px dashed #DCDCDC;margin-top:34px}
+#Coment dt{display:inline-block;margin-top:20px}
+#Coment dt a img{display:block;width:60px;height:65px}
+#Coment dt a span{display:block}
+#Coment dd{width:762px;margin-left:90px;display:inline-block}
+#Coment dd i{display:inline-block;width:60px;height:12px;margin-left:10px;background:url(../img/review_star_fen.gif)}
+#Coment dd span{margin-left:10px}
+#Coment dd p:first-of-type{width:100%;height:30px;border-bottom:1px solid #ccc}
+#Coment dd p:first-of-type span{float:right}
+#List{margin-top:20px}
+#List .detail_show p:first-of-type{width:930px;height:73px;background:#EFEFF4;margin-left:22px;padding-left:10px;padding-top:15px;margin-top:20px;box-sizing:border-box}
+#List .detail_show p:nth-of-type(2){width:930px;height:40px;background:#EFEFF4;margin-left:22px;text-align:center;line-height:40px}
+#List .detail_show p:nth-of-type(2) span{margin-right:5px}
+#List .detail_show ul{width:930px;height:244px;margin-top:20px;margin-left:22px}
+#List .detail_show li{float:left;margin-right:20px}
+#List .detail_show li span{display:block;height:30px}
+#List .detail_show li img{display:block;width:156px;height:174px;margin-top:5px}
+#Story{margin-top:20px}
+#Story .detail_show img{margin-top:20px;margin-left:25px}
+#Story .detail_show ul{width:921px;height:300px}
+#Story .detail_show ul li{width:440px;height:77px;float:left;margin-right:20px}
+#Story .detail_show ul li a span{display:block;padding-left:90px;position:relative;top:-50px}
+#Story .detail_show ul li a span:first-of-type{color:#000}
+#Story .detail_show ul li a span:nth-of-type(2){margin-top:5px;text-indent:2em}
+#Story .detail_show ul li span:last-of-type{float:right}
+#Story .detail_show ul li img{width:46px;height:51px;display:block}
+#Story .detail_show p{width:930px;height:40px;background:#EFEFF4;margin-left:22px;text-align:center;line-height:40px;margin-top:20px}
+#Server{margin-top:20px;padding-bottom:30px;margin-bottom:30px}
+#Server .detail_show{padding-left:30px}
+#Server .detail_show .detail_slide{width:914px;height:95px;margin-top:20px}
+#Server .detail_show .detail_slide li{width:16%;height:95px;float:left;text-align:center}
+#Server .detail_show .detail_slide li a{display:block;width:100%;height:100%;cursor:pointer}
+#Server .detail_show .detail_slide li i{display:block;width:60px;height:60px;background:url(../img/server_z.png) no-repeat;margin-left:40px}
+#Server .detail_show .detail_slide li span{display:block;margin-top:10px}
+#Server .detail_show .detail_slide .active a{color:#FF6A00}
+#Server .detail_show .detail_server_img{margin-top:10px;width:914px;height:355px;position:relative}
+#Server .detail_show .detail_server_img li{width:914px;height:355px;position:absolute;left:0;top:0}
+#Server .detail_show .detail_server_img img{display:block;width:914px;height:355px}
+#Server .detail_show .show{z-index:100}
