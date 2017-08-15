@@ -469,7 +469,7 @@ div.skill p{
 .circle-wrap{
     border: 10px solid #ddd;
     position: absolute;
-    clip: rect(0,140px,140px,70px);/* 闇€瑕佹樉绀哄嚭鏉ョ殑鍏ㄩ儴*/
+    clip: rect(0,140px,140px,70px);
 }
 .circle-wrap.clip-auto{
     clip:rect(auto, auto, auto, auto);
@@ -481,9 +481,10 @@ div.skill p{
     position: absolute;
 }
 .circle-wrap .left-clip {
-    clip:rect( 0 70px 140px 0); /* 闇€瑕佹樉绀哄嚭鏉ョ殑宸﹁竟*/
+    clip:rect( 0 70px 140px 0); 
     transition : transform ease;
 }
+
 .circle-wrap .right-clip {
     clip: rect(0,140px,140px,70px); /* 闇€瑕佹樉绀哄嚭鏉ョ殑鍙宠竟*/
 }
@@ -524,7 +525,7 @@ div.skill p{
 
 }
 #section5.active .fades>div:nth-child(4) .left-clip{
-    transform: rotate(288deg);
+    transform: rotate(208deg);
     transition: 2s;
 
 }
